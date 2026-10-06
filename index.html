@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#FBF4F2">
-<link rel="manifest" href="洛希.webmanifest">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
 <title>洛希守护</title>
 <style>
@@ -90,14 +90,14 @@ const today=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth
 const nowT=()=>new Date().toTimeString().slice(0,5);
 const D=x=>new Date(x+"T00:00:00Z"),plus=(x,n)=>new Date(D(x).getTime()+n*864e5).toISOString().slice(0,10),diff=(a,b)=>Math.round((D(b)-D(a))/864e5);
 const addDays=n=>plus(today(),n),sorted=a=>[...a].sort((x,y)=>x.d<y.d?-1:1),WK=["日","一","二","三","四","五","六"];
-const SYM=["恶心呕吐","水肿","头痛","视物模糊","腹痛","阴道出血","胎动减少","宫缩/发紧","腰酸","烧心","便秘","尿频","头晕","失眠"],URG=["阴道出血","剧烈头痛","视物模糊","胎动减少","腹痛"];
-const RF=[["单胎妊娠",0],["规律产检中",0],["高龄（≥35岁）",1],["瘢痕子宫",1],["妊娠期高血压 / 子痫前期史",1],["妊娠期糖尿病",1],["贫血",1],["甲状腺功能异常",1]];
+const SYM=["恶心呕吐","水肿","头痛","剧烈头痛","视物模糊","腹痛","阴道出血","阴道流液/疑似破水","胎动减少","宫缩/发紧","腰酸","烧心","便秘","尿频","头晕","失眠","发烧","持续呕吐"],URG=["阴道出血","阴道流液/疑似破水","剧烈头痛","视物模糊","胎动减少","腹痛","发烧"];
+const RF=[["单胎妊娠",0],["规律产检中",0],["高龄（≥35岁）",1],["瘢痕子宫",1],["多胎妊娠",1],["妊娠期高血压 / 子痫前期史",1],["妊娠期糖尿病",1],["贫血",1],["甲状腺功能异常",1],["既往流产或早产史",1],["前置或低置胎盘（医生已说明）",1],["妊娠剧吐",1]];
 const LAB={"血红蛋白":["g/L",110,150],"红细胞压积":["%",33,45],"白细胞":["×10⁹/L",4,15],"血小板":["×10⁹/L",100,400],"空腹血糖":["mmol/L",3.3,5.1],"餐后2小时血糖":["mmol/L",3.3,6.7],"OGTT 1小时":["mmol/L",3.3,10],"OGTT 2小时":["mmol/L",3.3,8.5],"尿蛋白":["定性",0,0],"TSH":["mIU/L",0.1,2.5],"铁蛋白":["μg/L",30,200],"血清铁":["μmol/L",7,30],"ALT":["U/L",0,40],"AST":["U/L",0,40],"白蛋白":["g/L",32,50]};
 const CATS=["叶酸","钙剂","维生素D","铁剂","DHA","复合维生素","中药调理","降压药","降糖药","甲状腺药","其他处方药","营养补充","其他"];
 const BAG=["身份证/医保卡","产检手册与报告","住院用品清单复印件","待产衣物","新生儿连体衣","纸尿裤","湿纸巾","产妇卫生巾","洗漱用品","充电器/充电宝","吸管杯","零食与水","月子餐/家人联系方式"];
 const PLAN=[[6,"建档：血常规、尿常规、传染病筛查"],[11,"NT 超声"],[16,"唐筛或无创 DNA（按医嘱）"],[20,"大排畸超声"],[24,"糖耐量、血常规复查"],[28,"开始更勤产检，坚持数胎动"],[32,"生长超声、羊水与胎位"],[36,"B 族链球菌等（按医院安排）"],[37,"每周产检，准备待产"]];
 const EMO=["😣","😕","😐","🙂","😊"],PAIN=[["无",0],["轻",2],["中",5],["重",8]],MEALS=["早餐","上午加餐","午餐","下午加餐","晚餐","睡前加餐"];
-const FOODS=[["鸡蛋",6],["牛奶",8],["酸奶",6],["豆浆",7],["豆腐",8],["鱼虾",18],["瘦肉鸡肉",20],["绿叶菜",2],["杂粮主食",4],["水果",1],["坚果",4],["红枣枸杞",1]];
+const FOODS=[["鸡蛋",6],["牛奶",8],["酸奶",6],["豆浆",7],["豆腐",8],["鱼",20],["虾",18],["瘦肉鸡肉",20],["牛肉",22],["绿叶菜",2],["杂粮主食",4],["水果",1],["坚果",4],["奶酪",7],["红枣枸杞",1]];
 const demo=()=>({preg:{lmp:"2026-05-18",due:"2027-02-22",name:""},
  exams:[{d:"2026-07-20",t:"NT 超声（示例）",r:"未见明显异常"},{d:"2026-09-12",t:"中孕系统超声（示例）",r:"胎儿发育与孕周相符"}],
  meds:[{id:1,n:"叶酸（示例）",c:"叶酸",t:"每天早餐后",at:"08:00",done:{}},{id:2,n:"钙剂 + 维生素D（示例）",c:"钙剂",t:"每天午餐后",at:"12:30",done:{}},{id:3,n:"铁剂（示例）",c:"铁剂",t:"晚上，避免与奶同服",at:"21:00",done:{}},{id:4,n:"DHA（示例）",c:"DHA",t:"每天",at:"09:00",done:{}}],
@@ -155,6 +155,23 @@ function preg(){const p=S.preg||{},lmp=p.lmp;if(!lmp)return{t:"还没有预产�
  const days=diff(lmp,today()),week=Math.floor(days/7),wd=days%7,due=p.due||plus(lmp,280),left=diff(today(),due),tri=week<13?"孕早期":week<28?"孕中期":week<42?"孕晚期":"已过预产期";
  return{week,wd,days,due,left,tri,name:p.name||"",t:"孕 "+week+" 周 + "+wd+" 天",s:tri+" · 预产期 "+due.slice(5)+(left>=0?" · 还有 "+left+" 天":" · 已过 "+(-left)+" 天")}}
 function dueOf(){const p=S.preg||{};return p.due||(p.lmp?plus(p.lmp,280):null)}
+function guideOf(week){
+ if(week==null)return["填写孕周","到「我的」写下末次月经或预产期。填好后，这里会按孕周提示接下来常做的检查。"];
+ const rows=[
+  [42,"已过预产期","已经到或超过预产期。请按医生安排就诊，不要只在家里等。"],
+  [37,"每周产检","足月后产检通常更密。规律宫缩、破水、出血，或胎动比平时明显减少，直接去医院。待产包可以再核对一遍。"],
+  [36,"临产准备","这个阶段常看胎位，有的医院会做 B 族链球菌筛查。可以开始核对待产包和去医院的路线。"],
+  [32,"看生长","大约 30–34 周常做生长超声，看胎位、羊水和估计体重。结果以超声医生和产科的说明为准。"],
+  [28,"每天数胎动","进入孕晚期后，建议在宝宝比较活跃的时候每天数一次胎动。产检间隔通常会变短。"],
+  [24,"糖耐量","大约 24–28 周常做糖耐量，抽血前按医院要求空腹。同一阶段也常复查血常规。"],
+  [20,"大排畸","大约 20–24 周做系统超声，看胎儿结构。当天多留一点时间，结论请医生当面讲。"],
+  [16,"唐筛或无创","大约 15–20 周，医院可能安排唐筛或无创 DNA。做哪一项，听产科的安排。"],
+  [11,"NT 超声","大约 11–13 周做 NT。这是筛查，不是诊断，报告请医生解释。"],
+  [6,"准备建档","不少医院在孕 6–13 周建档，常做血常规、尿常规、血型和传染病筛查。带上身份证和医保卡。"],
+  [0,"孕早期","恶心、犯困、尿频都很常见。叶酸吃不吃、吃到什么时候，按建档医生的说法。出血、剧痛，或吐到几乎吃不下东西，联系医生。"]
+ ];
+ return rows.find(r=>week>=r[0]).slice(1);
+}
 function alerts(){
  const A=[],T=today(),LG=sorted(S.logs),pr=preg();
  const ls=LG.filter(x=>x.sym&&x.sym.length).pop();
@@ -192,7 +209,7 @@ function closeSheet(){const s=$("sh");if(s)s.remove()}
 function chart(arr,key){if(!arr.length)return '<p class="sub">还没有数据，点右下方“＋”添加。</p>';
  const W=320,H=150,pl=30,pr=14,pt=16,pb=26,vs=arr.map(x=>x[key]),mx=Math.max(...vs)*1.15||1,mn=Math.min(0,...vs),X=i=>pl+(arr.length==1?(W-pl-pr)/2:i*(W-pl-pr)/(arr.length-1)),Y=v=>pt+(H-pt-pb)*(1-(v-mn)/(mx-mn||1)),pts=arr.map((x,i)=>X(i)+","+Y(x[key])).join(" ");
  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img"><line x1="${pl}" y1="${H-pb}" x2="${W-pr}" y2="${H-pb}" stroke="var(--line)"/><text x="2" y="${pt+4}">${+mx.toFixed(2)}</text><text x="2" y="${H-pb}">${mn}</text>${arr.length>1?`<polygon points="${X(0)},${H-pb} ${pts} ${X(arr.length-1)},${H-pb}" fill="var(--rose)" opacity=".1"/>`:""}<polyline points="${pts}" fill="none" stroke="var(--rose)" stroke-width="2.4" stroke-linejoin="round"/>${arr.map((x,i)=>`<circle cx="${X(i)}" cy="${Y(x[key])}" r="4" fill="var(--card)" stroke="var(--rose)" stroke-width="2"/><text x="${X(i)}" y="${Y(x[key])-8}" text-anchor="middle">${x[key]}</text><text x="${X(i)}" y="${H-10}" text-anchor="middle">${x.d.slice(5)}</text>`).join("")}</svg>`}
-let tab="today",vd=today(),seg="weight",selD=today(),cm=0,labk="血红蛋白",dp={type:"blood"},acc=new Set(["med","pg","dose","bl"]),mp={sel:[],img:[],type:null,txt:"",pro:0},nd={kind:"日常",title:"",text:"",imgs:[]},wv=0,mc="其他",medId=null,rfOn=i=>S.risk[i]===true,kickN=10,bloodSel=["血红蛋白","空腹血糖","TSH","铁蛋白"],ctxRun=null,ctxT0=0;
+let tab="today",vd=today(),seg="weight",selD=today(),cm=0,labk="血红蛋白",dp={type:"exam"},acc=new Set(["med","pg","dose","bl"]),mp={sel:[],img:[],type:null,txt:"",pro:0},nd={kind:"日常",title:"",text:"",imgs:[]},wv=0,mc="其他",medId=null,rfOn=i=>S.risk[i]===true,kickN=10,bloodSel=["血红蛋白","空腹血糖","TSH","铁蛋白"],ctxRun=null,ctxT0=0;
 function standalone(){return window.navigator.standalone===true||window.matchMedia("(display-mode: standalone)").matches}
 let offlineOK=false;
 function securePage(){return location.protocol==="https:"||location.hostname==="localhost"||location.hostname==="127.0.0.1"}
@@ -206,7 +223,7 @@ function render(keep){$("app").innerHTML=V[tab]();$("nav").innerHTML=[["today","
 const go=t=>{tab=t;vd=today();render()};
 const V={};
 V.today=()=>{const T=today(),A=alerts(),lv=A.some(a=>a[0]=="alert")?"alert":A.length?"warn":"ok",l=S.logs.find(x=>x.d==T)||{},h=new Date().getHours(),now=nowT(),ph=preg(),ap=S.appt.filter(a=>a.d>=T).sort((a,b)=>a.d<b.d?-1:1)[0];
- const timed=S.meds.filter(m=>m.at).sort((a,b)=>a.at<b.at?-1:1),other=S.meds.filter(m=>!m.at),dn=S.meds.filter(m=>m.done[T]).length,pro=proOf(T),ref=refPro(),wat=l.wat||0,kk=S.kicks.filter(x=>x.d==T).reduce((a,b)=>a+(+b.n||0),0);
+ const timed=S.meds.filter(m=>m.at).sort((a,b)=>a.at<b.at?-1:1),other=S.meds.filter(m=>!m.at),dn=S.meds.filter(m=>m.done[T]).length,pro=proOf(T),ref=refPro(),wat=l.wat||0,kk=S.kicks.filter(x=>x.d==T).reduce((a,b)=>a+(+b.n||0),0),g=guideOf(ph.week),np=ph.week==null?PLAN[0]:PLAN.find(p=>p[0]>ph.week);
  const row=m=>{const d=medDone(m,T),late=!d&&m.at&&m.at<=now;return `<div class="item ${d?"done":""}" onclick="tick(${m.id})"><div class="ck">${d?"✓":""}</div><div style="flex:1"><div class="nm">${esc(m.n)}</div><div class="sub">${m.at?m.at+" · ":""}${esc(m.t)}${typeof m.done[T]=="string"?" · 已服 "+m.done[T]:""}</div></div><span class="tag ${late?"a":""}">${late?"已到点":esc(m.c)}</span></div>`};
  return `${installCard()}${backupCard()}<div class="hd"><h1>${h<11?"早上好":h<18?"下午好":"晚上好"} ♡</h1><p>${T.slice(5).replace("-","月")}日 周${WK[new Date().getDay()]} · ${ph.name?esc(ph.name)+" 在长大":"和宝宝一起慢慢来"}</p></div>
  <details class="rib ${lv}"><summary>${lv=="ok"?"今天状态平稳，继续好好照顾自己 ✨":lv=="warn"?"有 "+A.length+" 项需要留意 ›":"有需要尽快联系医生的情况 ›"}</summary>${A.length?`<ul>${A.map(a=>`<li>${esc(a[1])}</li>`).join("")}</ul>`:""}</details>
@@ -214,13 +231,14 @@ V.today=()=>{const T=today(),A=alerts(),lv=A.some(a=>a[0]=="alert")?"alert":A.le
  <div class="card"><div class="row"><div style="flex:1"><div class="sub">蛋白质</div><div class="big">${pro}<span class="sub"> / ${ref} 克</span></div></div><button class="btn soft" onclick="sheetMeal()">🍽 记一餐</button></div><div class="prog" style="margin-top:10px"><i style="width:${Math.min(100,pro/ref*100)}%"></i></div>
  <div class="row" style="margin-top:14px"><div style="flex:1"><div class="sub">饮水</div><div class="big">${wat}<span class="sub"> 毫升</span></div></div><button class="btn soft" onclick="water()">💧 +1杯</button></div>
  <div class="row" style="margin-top:14px"><div style="flex:1"><div class="sub">今日胎动</div><div class="big">${kk}<span class="sub"> 次</span></div></div><button class="btn soft" onclick="sheetKick()">👶 数胎动</button></div></div>
- <div class="card" onclick="sheetState()" style="cursor:pointer"><h2>今天的状态</h2>${l.mood!=null||l.en!=null||l.ap!=null?`<div class="row" style="gap:18px;font-size:15px">${[["心情","mood"],["体力","en"],["食欲","ap"]].map(k=>`<span>${k[0]} ${l[k[1]]!=null?EMO[Math.round(l[k[1]]/2)-1]:"–"}</span>`).join("")}${l.pain!=null?`<span>疼痛 ${l.pain}</span>`:""}</div>`:'<p class="sub" style="margin:0">还没记录，点这里记一下心情和身体 ›</p>'}</div>
+ <div class="card" onclick="sheetState()" style="cursor:pointer"><h2>今天的状态</h2>${l.mood!=null||l.en!=null||l.ap!=null?`<div class="row" style="gap:18px;font-size:15px">${[["心情","mood"],["体力","en"],["食欲","ap"]].map(k=>`<span>${k[0]} ${l[k[1]]!=null?EMO[Math.round(l[k[1]]/2)-1]:"–"}</span>`).join("")}${l.pain!=null?`<span>疼痛 ${l.pain}</span>`:""}</div>`:'<p class="sub" style="margin:0">还没记录，点这里记一下心情和身体 ›</p>'}${l.sym&&l.sym.length?`<div class="row" style="margin-top:8px">${l.sym.map(s=>`<span class="tag a">${esc(s)}</span>`).join("")}</div>`:""}${l.w?`<p class="sub" style="margin:8px 0 0">体重 ${l.w} kg${l.sys?" · 血压 "+l.sys+"/"+l.dia:""}</p>`:l.sys?`<p class="sub" style="margin:8px 0 0">血压 ${l.sys}/${l.dia}</p>`:""}</div>
  ${noteToday()}<div class="card"><h2>信号</h2><div class="sig">${sig().map(x=>`<span><i class="dot ${x[1]}"></i>${x[0]} ${esc(x[2])}</span>`).join("")}</div></div>
+ <div class="card"><div class="row"><h2 style="margin:0">这一周</h2><span class="tag sp">${esc(g[0])}</span></div><p style="margin:8px 0 0">${esc(g[1])}</p>${np?`<p class="sub">接下来常安排：孕 ${np[0]} 周 · ${esc(np[1])}</p>`:`<p class="sub">具体检查以产科当次安排为准。</p>`}</div>
  <div class="row" style="gap:10px;margin-bottom:14px"><div class="card" style="flex:1;margin:0;padding:13px" onclick="tab='trend';seg='preg';render()"><div class="sub">🤰 孕周</div><b>${ph.t}</b><div class="sub">${ph.s}</div></div><div class="card" style="flex:1;margin:0;padding:13px" onclick="go('me')"><div class="sub">📅 下一次产检</div>${ap?`<b>${esc(ap.t)}</b><div class="sub">${ap.d.slice(5)} · ${diff(T,ap.d)||"今"}天${diff(T,ap.d)?"后":""}</div>`:'<div class="sub">暂无</div>'}</div></div>
  <p class="tiny">洛希守护 · 示例数据，仅保存在本机。不能诊断或替代产检，有出血、剧痛、胎动减少、视物模糊等请立刻就医。</p>`};
 function tick(id){const m=S.meds.find(x=>x.id==id),T=today();if(m.done[T]){delete m.done[T];S.doses=S.doses.filter(x=>!(x.mid==m.id&&x.d==T))}else{m.done[T]=nowT();S.doses.push({id:Date.now(),mid:m.id,n:m.n,d:T,t:m.done[T],dose:m.dose||"",note:""});toast("已打卡 ✓")}save();render(true)}
 function water(){const l=TL();l.wat=(l.wat||0)+200;save();toast("💧 已记录 "+l.wat+" 毫升");render(true)}
-function menu(){const T=[["📝","记今天","sheetNote()"],["🍽","记一餐","sheetMeal()"],["🙂","今日状态","sheetState()"],["💊","记一次药","sheetDose()"],["🩸","血化验","sheetBlood()"],["👶","胎动","sheetKick()"],["🩺","血压","sheetBP()"],["⏱","宫缩","sheetCtx()"],["💧","喝水","water();closeSheet()"]];
+function menu(){const T=[["📝","记今天","sheetNote()"],["🍽","记一餐","sheetMeal()"],["🙂","今日状态","sheetState()"],["⚖️","体重","sheetW()"],["🌡","症状","sheetSym()"],["👶","胎动","sheetKick()"],["🩺","血压","sheetBP()"],["🧪","产检","dp.type='exam';sheetData()"],["💊","记一次药","sheetDose()"],["🩸","血化验","sheetBlood()"],["⏱","宫缩","sheetCtx()"],["💧","喝水","water();closeSheet()"]];
  sheet("记录一下",`<div class="tiles">${T.map(t=>`<div class="tile" onclick="${t[2]}"><b>${t[0]}</b>${t[1]}</div>`).join("")}</div>`)}
 const ctxDay=()=>tab=="diary"?vd:today(),dayTag=()=>ctxDay()==today()?"":`<p class="sub" style="margin-top:-6px">记录到 ${ctxDay()}</p>`;
 const mealByHour=()=>{const h=new Date().getHours();return h<9?"早餐":h<11?"上午加餐":h<14?"午餐":h<17?"下午加餐":h<20?"晚餐":"睡前加餐"};
@@ -264,7 +282,7 @@ function sheetPreg(){const p=S.preg||{};sheet("孕周与预产期",`<label class
  <button class="btn big" onclick="savePreg()">保存</button>`)}
 function savePreg(){const lmp=$("lmp").value,due=$("due").value||(lmp?plus(lmp,280):"");if(!lmp&&!due){toast("请填末次月经或预产期");return}
  S.preg={name:$("bn").value.trim(),lmp,due:due||plus(lmp,280)};save();closeSheet();toast("已更新孕周 🤰");render(true)}
-function sheetData(){const t=dp.type,TY=[["lab","化验"],["exam","超声/产检"],["fh","宫高"]];
+function sheetData(){if(dp.type!="lab"&&dp.type!="exam"&&dp.type!="fh")dp.type="exam";const t=dp.type,TY=[["lab","化验"],["exam","超声/产检"],["fh","宫高"]];
  const f={lab:`<label class="l">项目</label><select id="dk">${Object.keys(LAB).map(k=>`<option ${k==labk?"selected":""}>${k}</option>`).join("")}</select><label class="l">数值</label><input id="dv" type="number" step="0.01" inputmode="decimal">`,
  exam:`<label class="l">检查项目</label><input id="dt" placeholder="NT / 大排畸 / 常规产检"><label class="l">结论要点</label><input id="dr" placeholder="一句话结论">`,
  fh:`<label class="l">宫高（厘米）</label><input id="dv" type="number" step="0.1" inputmode="decimal">`}[t];
@@ -273,6 +291,7 @@ function saveData(){const t=dp.type,d=$("dd").value,v=$("dv")?parseFloat($("dv")
  if(t=="exam"){if(!$("dt").value.trim()){toast("请填检查项目");return}S.exams.push({d,t:$("dt").value.trim(),r:$("dr").value.trim()||"（未填）"})}
  else{if(isNaN(v)){toast("请填数值");return}if(t=="fh"){TL(d).fh=v}else{labk=$("dk").value;S.labs.push({d,k:labk,v})}}
  save();closeSheet();toast("已保存 🧪");tab="trend";seg=t=="exam"?"preg":t=="fh"?"weight":"lab";render()}
+function delExam(i){if(!confirm("删除这条检查？"))return;S.exams.splice(i,1);save();render(true)}
 function pickCat(c){mc=c;document.querySelectorAll("#cc .chip").forEach(e=>e.classList.toggle("on",e.getAttribute("data-c")===c));const box=$("mcat");if(box)box.value=""}
 function sheetMed(id){medId=id||null;const m=id?S.meds.find(x=>x.id==id):{n:"",c:"其他",t:"每天",at:"",dose:"",remind:true};const known=CATS.includes(m.c);mc=known?m.c:"其他";
  sheet(id?"编辑药物 / 补充剂":"添加药物 / 补充剂",`<label class="l">药物名称</label><input id="mn" value="${esc(m.n)}" placeholder="自己填写，例如 黄体酮、阿司匹林">
@@ -408,7 +427,8 @@ function cal(){const p=preg(),n=new Date(),m0=new Date(Date.UTC(n.getFullYear(),
 const AC=(k,t,b)=>`<details class="acc" ${acc.has(k)?"open":""} ontoggle="this.open?acc.add('${k}'):acc.delete('${k}')"><summary>${t}</summary><div class="in">${b}</div></details>`;
 V.me=()=>{const up=S.appt.filter(a=>a.d>=today()).sort((a,b)=>a.d<b.d?-1:1),on=rfOn,u=RF.filter((r,i)=>on(i)&&r[1]).length,dn=RF.filter((r,i)=>on(i)&&!r[1]).length,ph=preg(),w=ph.week,bagN=BAG.filter(x=>S.bag&&S.bag[x]).length,recent=sorted(S.doses).slice(-8).reverse();
  return `<div class="hd"><h1>我的</h1><p>用药、血检、提醒和导出都在这里</p></div>
- ${AC("pg","🤰 孕周与宝宝",`<p><b>${ph.t}</b></p><p class="sub">${ph.s}${ph.name?" · "+esc(ph.name):""}</p><button class="btn" onclick="sheetPreg()">填写 / 修改</button>`)}
+ ${AC("pg","🤰 孕周与宝宝",`<p><b>${ph.t}</b></p><p class="sub">${ph.s}${ph.name?" · "+esc(ph.name):""}</p><p style="margin:8px 0 0">${esc(guideOf(ph.week)[1])}</p><button class="btn" onclick="sheetPreg()">填写 / 修改</button>`)}
+ ${AC("ex","🧪 超声与产检",`${sorted(S.exams).slice().reverse().map(e=>{const i=S.exams.indexOf(e);return `<div class="row" style="padding:7px 0"><div style="flex:1"><b>${esc(e.t)}</b><div class="sub">${e.d} · ${esc(e.r)}</div></div><button class="btn ghost sm" onclick="delExam(${i})">删除</button></div>`}).join("")||'<p class="sub">NT、大排畸、常规产检可以记在这里，产检当天打开日历也能看到。</p>'}<div class="row" style="margin-top:8px"><button class="btn" onclick="dp.type='exam';sheetData()">＋ 记一次检查</button><button class="btn soft" onclick="dp.type='fh';sheetData()">记宫高</button></div>`)}
  ${AC("plan","📅 产检时间轴",PLAN.map(([wk,t])=>`<div class="row" style="padding:7px 0;border-top:1px solid var(--line)"><span class="tag ${w!=null&&w>=wk?"g":""}">${wk}周</span><span style="flex:1">${t}</span>${w!=null&&w>=wk?"<span class='sub'>到点</span>":""}</div>`).join("")+`<p class="sub">仅作备忘，具体检查以产科安排为准。</p>`)}
  ${AC("med","💊 药物与吃药提醒",`${S.meds.map(m=>`<div class="item" onclick="sheetMed(${m.id})"><div style="flex:1"><div class="nm">${esc(m.n)}</div><div class="sub">${m.at?m.at+" 提醒 · ":""}${esc(m.t)}${m.dose?" · "+esc(m.dose):""}${m.remind===false?" · 不提醒":""}</div></div><span class="tag">${esc(m.c)}</span></div>`).join("")||'<p class="sub">暂无</p>'}<div class="row" style="margin-top:12px"><button class="btn" onclick="sheetMed()">＋ 添加药物</button><button class="btn soft" onclick="addVit()">一键叶酸/钙/铁</button></div><p class="sub">添加时自己写药名。导出文件含全部记录，可再导入回来。</p><div class="row"><button class="btn soft" onclick="backupData()">保存到文件</button><button class="btn soft" onclick="pickImport()">导入记录</button></div>${(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform())?`<button class="btn big" onclick="enableReminders()">开启系统吃药提醒</button><p class="sub">保存带时间的药物后会每天推送。</p>`:`<button class="btn big" onclick="shareMedsIcs()">把吃药时间加到日历</button><p class="sub">iPhone 日历会到点提醒。打开洛希守护也能看到今天吃了没有。</p>`}`)}
  ${AC("dose","📒 用药记录",`${recent.map(x=>`<div class="row" style="padding:6px 0"><div style="flex:1"><b>${esc(x.n)}</b><div class="sub">${x.d} ${x.t}${x.dose?" · "+esc(x.dose):""}${x.note?" · "+esc(x.note):""}</div></div><button class="btn ghost sm" onclick="delDose(${x.id})">删除</button></div>`).join("")||'<p class="sub">打卡或点“记一次药”会出现在这里</p>'}<button class="btn soft big" onclick="sheetDose()">＋ 记一次用药</button>`)}
@@ -517,7 +537,7 @@ function hydrate(stateRaw,foodRaw){
   scheduleReminders();
   if(securePage()&&"serviceWorker"in navigator){
     navigator.serviceWorker.register("sw.js").then(()=>navigator.serviceWorker.ready).then(async()=>{
-      const cache=await caches.open("luoxi-v1");
+      const cache=await caches.open("luoxi-v2");
       let hit=await cache.match("./")||await cache.match("index.html");
       if(!hit){
         const res=await fetch("index.html",{cache:"reload"});
