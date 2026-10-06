@@ -7,15 +7,15 @@
 <meta name="apple-mobile-web-app-title" content="洛希守护">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#3E8F6E">
+<meta name="theme-color" content="#FBF4F2">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
 <title>洛希守护</title>
 <style>
-:root{--bg:#F3F7F4;--card:#fff;--ink:#2A3330;--sub:#6B7A72;--line:#DCE8E1;--rose:#3E8F6E;--rose2:#E2F1E9;--sage:#5E9C82;--sage2:#E2F1E9;--lav:#5A8F9C;--lav2:#E0EFF2;--amb:#C98A2B;--amb2:#FCEFD3;--red:#C8485A;--red2:#FADDE0;--sh:0 4px 18px rgba(62,143,110,.14);
+:root{--bg:#FBF4F2;--card:#fff;--ink:#3B2D33;--sub:#8C7B82;--line:#F0E3E2;--rose:#D4688A;--rose2:#F9E1E8;--sage:#5E9C82;--sage2:#E2F1E9;--lav:#8A78C4;--lav2:#ECE8F8;--amb:#C98A2B;--amb2:#FCEFD3;--red:#C8485A;--red2:#FADDE0;--sh:0 4px 18px rgba(180,110,130,.12);
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141A17;--card:#1E2824;--ink:#E8F0EB;--sub:#9AADA3;--line:#2E3D36;--rose:#6BB892;--rose2:#22372F;--sage:#7CC4A5;--sage2:#22372F;--lav:#7EB8C4;--lav2:#243338;--amb:#E8B25A;--amb2:#43341A;--red:#F28594;--red2:#472529;--sh:none}}
-:root[data-theme="dark"]{--bg:#141A17;--card:#1E2824;--ink:#E8F0EB;--sub:#9AADA3;--line:#2E3D36;--rose:#6BB892;--rose2:#22372F;--sage:#7CC4A5;--sage2:#22372F;--lav:#7EB8C4;--lav2:#243338;--amb:#E8B25A;--amb2:#43341A;--red:#F28594;--red2:#472529;--sh:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1D1618;--card:#2A2124;--ink:#F3E8EA;--sub:#B3A0A7;--line:#3A2E32;--rose:#F08FAE;--rose2:#432A33;--sage:#7CC4A5;--sage2:#22372F;--lav:#B3A3EA;--lav2:#302B45;--amb:#E8B25A;--amb2:#43341A;--red:#F28594;--red2:#472529;--sh:none}}
+:root[data-theme="dark"]{--bg:#1D1618;--card:#2A2124;--ink:#F3E8EA;--sub:#B3A0A7;--line:#3A2E32;--rose:#F08FAE;--rose2:#432A33;--sage:#7CC4A5;--sage2:#22372F;--lav:#B3A3EA;--lav2:#302B45;--amb:#E8B25A;--amb2:#43341A;--red:#F28594;--red2:#472529;--sh:none}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-size:15px;line-height:1.5}
 h1,h2,h3{font-family:"Songti SC","Noto Serif SC",Georgia,serif;margin:0;font-weight:700}
@@ -59,10 +59,10 @@ label.l,.lab{display:block;font-size:13px;color:var(--sub);margin:12px 0 5px}
 .shp{position:absolute;left:0;right:0;bottom:0;max-width:560px;margin:0 auto;background:var(--card);border-radius:26px 26px 0 0;padding:10px 18px calc(24px + env(safe-area-inset-bottom,0px));max-height:88%;overflow-y:auto;animation:up .22s ease}
 .shp h3{font-size:19px;margin:6px 0 12px}.grab{width:40px;height:4px;border-radius:9px;background:var(--line);margin:0 auto}
 @keyframes up{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
-nav{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr 70px 1fr 1fr;align-items:end;background:var(--card);box-shadow:0 -4px 18px rgba(62,143,110,.12);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));z-index:10}
+nav{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr 70px 1fr 1fr;align-items:end;background:var(--card);box-shadow:0 -4px 18px rgba(180,110,130,.12);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));z-index:10}
 nav button{border:0;background:none;font:inherit;font-size:11.5px;color:var(--sub);padding:6px 0;cursor:pointer}nav button b{display:block;font-size:21px;font-weight:400}
 nav button.on{color:var(--rose);font-weight:700}
-nav .fab{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--lav));color:#fff;font-size:30px;margin:-24px auto 4px;box-shadow:0 6px 16px rgba(62,143,110,.35);padding:0}
+nav .fab{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--lav));color:#fff;font-size:30px;margin:-24px auto 4px;box-shadow:0 6px 16px rgba(212,104,138,.4);padding:0}
 .photo-row{margin-top:10px}.paste-box{margin-top:10px;padding:14px;border:2px dashed var(--line);border-radius:16px;text-align:center;color:var(--sub);font-size:13px;min-height:52px;outline:none;background:var(--bg)}.paste-box:focus{border-color:var(--rose)}
 .seg{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;scrollbar-width:none}.seg::-webkit-scrollbar{display:none}.seg .chip{flex:none}
 .acc{background:var(--card);border-radius:20px;margin-bottom:12px;padding:0 16px;box-shadow:var(--sh)}.acc summary{padding:15px 0;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
@@ -93,29 +93,29 @@ const D=x=>new Date(x+"T00:00:00Z"),plus=(x,n)=>new Date(D(x).getTime()+n*864e5)
 const addDays=n=>plus(today(),n),sorted=a=>[...a].sort((x,y)=>x.d<y.d?-1:1),WK=["日","一","二","三","四","五","六"];
 const CANCERS=["胃癌","胃食管结合部癌","结直肠癌","食管癌","肝癌","胰腺癌","肺癌","乳腺癌","其他实体瘤"];
 const PHASES=["新诊断评估","术前新辅助","术后辅助治疗","一线治疗","维持治疗","复发/转移治疗","康复随访","其他"];
-const SYM=["恶心呕吐","腹痛","剧烈腹痛","腹胀","黑便/便血","吞咽困难","腹泻","便秘","口腔溃疡","皮疹","手足综合征","乏力","发热","咳嗽气促","水肿","黄疸","食欲下降","体重下降","失眠","神经麻木"],URG=["黑便/便血","发热","黄疸","剧烈腹痛","咳嗽气促"];
-const RF=[["规律复诊中",0],["正在化疗",1],["靶向/免疫治疗中",1],["骨髓抑制风险（白细胞/血小板低）",1],["肝肾功能异常",1],["糖尿病",1],["心脏病史",1],["抗凝/抗血小板用药",1],["营养不良/体重下降明显",1],["合并感染或发热",1],["术后恢复期",0],["需 PICC/输液港护理",1]];
-const LAB={"CEA":["ng/mL",0,5],"CA19-9":["U/mL",0,37],"CA72-4":["U/mL",0,6],"血红蛋白":["g/L",110,150],"白细胞":["×10⁹/L",3.5,9.5],"血小板":["×10⁹/L",100,300],"ALT":["U/L",0,40],"AST":["U/L",0,40],"肌酐":["μmol/L",44,133],"白蛋白":["g/L",35,55]};
-const CATS=["靶向药","免疫治疗","化疗","抗酸护胃","止吐","止痛","升白升血小板","营养补充","中药调理","其他"];
-const DRUGS=[["曲妥珠单抗","靶向药"],["帕妥珠单抗","靶向药"],["维迪西妥单抗","靶向药"],["阿帕替尼","靶向药"],["瑞戈非尼","靶向药"],["呋喹替尼","靶向药"],["安罗替尼","靶向药"],["贝伐珠单抗","靶向药"],["西妥昔单抗","靶向药"],["奥希替尼","靶向药"],["吉非替尼","靶向药"],["埃克替尼","靶向药"],["阿美替尼","靶向药"],["信迪利单抗","免疫治疗"],["卡瑞利珠单抗","免疫治疗"],["替雷利珠单抗","免疫治疗"],["纳武利尤单抗","免疫治疗"],["帕博利珠单抗","免疫治疗"],["替吉奥","化疗"],["卡培他滨","化疗"],["奥沙利铂","化疗"],["紫杉醇","化疗"],["白蛋白紫杉醇","化疗"],["多西他赛","化疗"],["氟尿嘧啶","化疗"],["伊立替康","化疗"],["奥美拉唑","抗酸护胃"],["雷贝拉唑","抗酸护胃"],["昂丹司琼","止吐"],["甲氧氯普胺","止吐"],["地塞米松","止吐"],["吗啡缓释片","止痛"],["氨酚羟考酮","止痛"],["聚乙二醇化重组人粒细胞刺激因子","升白升血小板"],["重组人促血小板生成素","升白升血小板"],["蛋白粉","营养补充"]];
+const SYM=["恶心呕吐","腹痛","剧烈腹痛","腹胀","黑便/便血","吞咽困难/卡顿","烧心反酸","腹泻","便秘","黏液便/白冻样便","口腔溃疡","皮疹","手足综合征","乏力","发热","咳嗽气促","胸闷","水肿","黄疸","食欲下降","体重下降","失眠","神经麻木","尿频尿急尿痛","关节肌肉痛","心悸"],URG=["黑便/便血","发热","黄疸","剧烈腹痛","咳嗽气促","尿频尿急尿痛"];
+const RF=[["规律复诊 / MDT 随访中",0],["纳武利尤单抗维持治疗中",1],["日达仙（胸腺法新）联合中",1],["MRD 持续阳性、影像阴性",1],["弥漫型 / 印戒背景胃癌",1],["近端胃切除 + 三角吻合术后",1],["营养不良 / 贫血",1],["甲状腺功能减退",1],["疑似嗜酸性食管炎（irAE 相关）",1],["替吉奥诱发尿路样反应史",1],["奥沙利铂黏膜反应史",1],["右肺磨玻璃结节（AIS→MIA，独立病史）",1],["卵巢 / Krukenberg 专家意见分歧",1],["计划 FDG+FAPI 双示踪 PET/CT",1]];
+const LAB={"CEA":["ng/mL",0,5],"CA19-9":["U/mL",0,37],"CA72-4":["U/mL",0,6],"CA125":["U/mL",0,35],"HE4":["pmol/L",0,70],"血红蛋白":["g/L",110,150],"白细胞":["×10⁹/L",3.5,9.5],"血小板":["×10⁹/L",100,300],"ALT":["U/L",0,40],"AST":["U/L",0,40],"肌酐":["μmol/L",44,133],"白蛋白":["g/L",35,55],"TSH":["mIU/L",0.27,4.2],"游离T4":["pmol/L",12,22],"铁蛋白":["μg/L",30,200]};
+const CATS=["靶向药","免疫治疗","化疗","免疫调节","抗酸护胃","止吐","止痛","升白升血小板","甲状腺药","营养补充","中药调理","其他"];
+const STOOL=["正常","偏软","稀便","便秘","黏液/白冻样","黑便","血便"],SWALLOW=[["顺畅",0],["轻微卡顿",2],["明显困难",5],["几乎难咽",8]],TEMP_ALERT=37.5;
+const DRUGS=[["曲妥珠单抗","靶向药"],["帕妥珠单抗","靶向药"],["维迪西妥单抗","靶向药"],["阿帕替尼","靶向药"],["瑞戈非尼","靶向药"],["呋喹替尼","靶向药"],["安罗替尼","靶向药"],["贝伐珠单抗","靶向药"],["西妥昔单抗","靶向药"],["奥希替尼","靶向药"],["吉非替尼","靶向药"],["埃克替尼","靶向药"],["阿美替尼","靶向药"],["信迪利单抗","免疫治疗"],["卡瑞利珠单抗","免疫治疗"],["替雷利珠单抗","免疫治疗"],["纳武利尤单抗","免疫治疗"],["帕博利珠单抗","免疫治疗"],["日达仙（胸腺法新）","免疫调节"],["左甲状腺素","甲状腺药"],["维迪西妥单抗","靶向药"],["替吉奥","化疗"],["卡培他滨","化疗"],["奥沙利铂","化疗"],["紫杉醇","化疗"],["白蛋白紫杉醇","化疗"],["多西他赛","化疗"],["氟尿嘧啶","化疗"],["伊立替康","化疗"],["奥美拉唑","抗酸护胃"],["雷贝拉唑","抗酸护胃"],["昂丹司琼","止吐"],["甲氧氯普胺","止吐"],["地塞米松","止吐"],["吗啡缓释片","止痛"],["氨酚羟考酮","止痛"],["聚乙二醇化重组人粒细胞刺激因子","升白升血小板"],["重组人促血小板生成素","升白升血小板"],["蛋白粉","营养补充"]];
 let draftMed={n:"",c:"靶向药"};
 const BAG=["身份证/医保卡","历次病理与影像报告","用药清单（含剂量）","PICC/输液港护理用品","止吐/护胃/止痛常备药","营养补充剂","体温计/血压计","口罩与消毒用品","充电器/充电宝","家属紧急联系方式","复诊预约单","住院日用品"];
 const MRD_METHODS=["ddPCR","NGS","组织检测","其他"],MRD_QUAL=["阳性","阴性","不确定"];
-const NOTE_KINDS=["日常","门诊","化验报告","影像报告","病理","MRD 报告","其他"];
+const NOTE_KINDS=["日常","门诊","化验报告","影像报告","病理","MRD 报告","PET/FAPI","专家会诊","用药反应","其他"];
 const EMO=["😣","😕","😐","🙂","😊"],PAIN=[["无",0],["轻",2],["中",5],["重",8]],MEALS=["早餐","上午加餐","午餐","下午加餐","晚餐","睡前加餐"];
 const FOODS=[["鸡蛋",6],["牛奶",8],["酸奶",6],["豆浆",7],["豆腐",8],["鱼",20],["虾",18],["瘦肉鸡肉",20],["牛肉",22],["绿叶菜",2],["杂粮主食",4],["水果",1],["坚果",4],["软食/流质",3],["蛋白粉",15]];
-const demo=()=>({profile:{name:"",cancer:"胃癌",stage:"III",phase:"术后辅助治疗",dxDate:"2024-06-12",surgDate:"2024-07-20",her2:"0",msi:"MSS",pdl1:"CPS 5"},
- mrd:[{id:1,d:"2024-08-15",method:"ddPCR",qual:"阳性",value:0.12,unit:"%",note:"术后首次（示例）",imgs:[]},{id:2,d:"2024-10-10",method:"ddPCR",qual:"阳性",value:0.05,unit:"%",note:"",imgs:[]},{id:3,d:"2024-12-05",method:"ddPCR",qual:"阳性",value:0.02,unit:"%",note:"",imgs:[]},{id:4,d:"2025-03-18",method:"ddPCR",qual:"阴性",value:0,unit:"%",note:"转阴性（示例）",imgs:[]},{id:5,d:"2025-09-01",method:"ddPCR",qual:"阴性",value:0,unit:"%",note:"",imgs:[]}],
- exams:[{d:"2025-06-10",t:"腹部增强 CT（示例）",r:"未见明确复发征象"},{d:"2025-08-02",t:"胃镜复查（示例）",r:"吻合口未见异常"}],
- meds:[{id:1,n:"替吉奥（示例）",c:"化疗",t:"早晚餐后",at:"08:00",dose:"按医嘱",remind:true,done:{}},{id:2,n:"奥美拉唑（示例）",c:"抗酸护胃",t:"每天早餐前",at:"07:30",dose:"20mg",remind:true,done:{}},{id:3,n:"昂丹司琼（示例）",c:"止吐",t:"化疗日按需",at:"",dose:"8mg",remind:false,done:{}}],
- reacts:[],intol:["青霉素：皮疹（示例）"],risk:{},
- logs:[{d:addDays(-4),w:52.0,pain:0,en:5,ap:5,sys:118,dia:72},{d:addDays(-3),w:52.2,pain:2,en:6,ap:6},{d:addDays(-2),w:52.1,pain:0,en:7,ap:7,sys:116,dia:70}],
- bp:[{d:addDays(-14),sys:118,dia:72},{d:addDays(-7),sys:116,dia:70},{d:addDays(-1),sys:120,dia:74}],
- appt:[{id:1,d:addDays(7),t:"肿瘤内科复诊（示例）"},{id:2,d:addDays(21),t:"MRD 抽血（示例）"}],
- labs:[{d:"2025-08-15",k:"CEA",v:2.1},{d:"2025-08-15",k:"CA19-9",v:18},{d:"2025-08-15",k:"血红蛋白",v:118},{d:"2025-08-15",k:"白蛋白",v:38}],
- doses:[{id:11,mid:1,n:"替吉奥（示例）",d:addDays(-1),t:"08:05",dose:"按医嘱",note:""},{id:12,mid:2,n:"奥美拉唑（示例）",d:today(),t:"07:35",dose:"20mg",note:""}],
- bloods:[{id:21,d:"2025-08-15",hosp:"示例医院肿瘤科",note:"复诊抽血",items:[{k:"CEA",v:2.1},{k:"CA19-9",v:18},{k:"血红蛋白",v:118},{k:"白蛋白",v:38}]}],
- bag:{},notes:[],remindOn:true});
+const demo=()=>({v:2,profile:{name:"洛希",cancer:"胃低分化腺癌（弥漫型 / 印戒背景）",stage:"ypT3N0",phase:"维持治疗",dxDate:"2023-12-09",surgDate:"2024-07-04",her2:"小灶1+",msi:"pMMR / MSS",pdl1:"CPS <1（术后）",claudin:"约10%弱阳",tmb:"术后 6.50 Muts/Mb",lauren:"弥漫型 / 低粘附性",blood:"A型",note:"近端根治+三角吻合；MRD持续阳性、影像阴性；右肺MIA独立病史"},
+ mrd:[{id:1,d:"2024-08-15",method:"NGS",qual:"阳性",value:null,unit:"",note:"术后随访起持续阳性（示例占位，请按真实报告改）",imgs:[]},{id:2,d:"2025-04-01",method:"NGS",qual:"阳性",value:null,unit:"",note:"影像同期未见明确异常",imgs:[]}],
+ exams:[{d:"2023-12-09",t:"胃镜+活检",r:"贲门下方胃体小弯病灶约2.5cm，低分化腺癌"},{d:"2023-12-28",t:"基线 PET-CT（FDG）",r:"胃小弯代谢增高；部分淋巴结/肠系膜可疑，待与术中探查对照"},{d:"2024-07-04",t:"近端根治术 + 三角胃吻合",r:"深圳肿瘤医院手术"},{d:"2024-07-14",t:"术后大病理",r:"ypT3N0，46枚淋巴结全阴，TRG 3级"},{d:"2025-04-01",t:"增强CT/MRI随访",r:"约9个月影像未见明确异常（示例）"}],
+ meds:[{id:1,n:"纳武利尤单抗",c:"免疫治疗",t:"约每3周~1个月一次（按医嘱）",at:"",dose:"按疗程",remind:false,done:{}},{id:2,n:"日达仙（胸腺法新）",c:"免疫调节",t:"每周两次（按医嘱）",at:"09:00",dose:"按医嘱",remind:true,done:{}},{id:3,n:"中药调理",c:"中药调理",t:"按方剂",at:"",dose:"",remind:false,done:{}},{id:4,n:"奥美拉唑",c:"抗酸护胃",t:"每天早餐前（如仍在用请按医嘱）",at:"07:30",dose:"20mg",remind:true,done:{}}],
+ reacts:[{d:"2024-05-31",n:"替吉奥",r:"口服后急性尿路感染样发热，已基本确认药物相关"},{d:"2024-06",n:"奥沙利铂",r:"用药后出汗、白色果冻样黏液、排气异味"},{d:"2024-08",n:"卡培他滨",r:"一疗程明显消瘦、腹部神经痛"},{d:"2024-09",n:"奥沙利铂+氟尿嘧啶",r:"胃肠不耐受、呕吐、流感样症状"}],
+ intol:["替吉奥（S-1）：尿频尿急尿痛伴发热","卡培他滨：明显消瘦与腹部神经痛","奥沙利铂：黏膜排出反应"],risk:{0:true,1:true,2:true,3:true,4:true,5:true,6:true,7:true,8:true,9:true,10:true,11:true,12:true,13:true},
+ logs:[{d:addDays(-4),w:48.5,pain:0,en:5,ap:5,temp:36.6,stool:"正常",swallow:0,sys:112,dia:70},{d:addDays(-3),w:48.6,pain:2,en:6,ap:6,temp:36.5,stool:"偏软",swallow:2},{d:addDays(-2),w:48.4,pain:0,en:6,ap:5,temp:36.7,stool:"正常",swallow:0,sys:114,dia:72}],
+ bp:[{d:addDays(-14),sys:112,dia:70},{d:addDays(-7),sys:114,dia:72},{d:addDays(-1),sys:116,dia:74}],
+ appt:[{id:1,d:addDays(10),t:"肿瘤内科复诊 / 纳武利尤单抗"},{id:2,d:addDays(28),t:"FDG + FAPI 双示踪 PET/CT（计划）"}],
+ labs:[{d:"2025-04-01",k:"CEA",v:1.8},{d:"2025-04-01",k:"CA19-9",v:15},{d:"2025-04-01",k:"血红蛋白",v:105},{d:"2025-04-01",k:"白蛋白",v:36},{d:"2025-04-01",k:"TSH",v:6.2},{d:"2024-01-01",k:"CA125",v:3104}],
+ doses:[],bloods:[],bag:{},notes:[{id:1,d:today(),t:"09:00",kind:"日常",title:"今日提醒",text:"MRD阳性≠影像可见病灶。记体温、大便颜色、吞咽卡顿和蛋白摄入，复诊时一起给医生看。肺部磨玻璃结节是独立病史，做 PET 前提醒读片医生。",imgs:[]}],remindOn:true});
 let S=null,F=[],fresh=false,dbReady=false,sqlite=null,booting=true;
 const DB="luoxi",LS="luoxi",LSF="luoxi_food";
 const lsGet=k=>{try{return localStorage.getItem(k)}catch(e){return null}};
@@ -158,7 +158,8 @@ const lastW=()=>{const W=sorted(S.logs).filter(x=>x.w>0);return W.length?W[W.len
 const refPro=()=>lastW()?Math.round(lastW()*1.1):70;
 const labFlag=(k,v)=>{if(k=="尿蛋白")return v>0?"阳性/偏高":"";return v<LAB[k][1]?"偏低":v>LAB[k][2]?"偏高":""};
 function prof(){const p=S.profile||{};if(!p.cancer&&!p.dxDate&&!p.stage)return{t:"还没有填写档案",s:"去「我的」填写癌种、分期和治疗阶段",cancer:"",stage:"",phase:"",name:p.name||""};
- return{t:(p.cancer||"实体瘤")+(p.stage?" · "+p.stage:""),s:(p.phase||"治疗阶段未填")+(p.dxDate?" · 确诊 "+p.dxDate.slice(5):""),cancer:p.cancer||"",stage:p.stage||"",phase:p.phase||"",name:p.name||"",dxDate:p.dxDate||"",surgDate:p.surgDate||"",her2:p.her2||"",msi:p.msi||"",pdl1:p.pdl1||""}}
+ const days=p.surgDate?diff(p.surgDate,today()):null;
+ return{t:(p.cancer||"实体瘤")+(p.stage?" · "+p.stage:""),s:(p.phase||"治疗阶段未填")+(p.dxDate?" · 确诊 "+p.dxDate.slice(5):"")+(days!=null?" · 术后 "+days+" 天":""),cancer:p.cancer||"",stage:p.stage||"",phase:p.phase||"",name:p.name||"",dxDate:p.dxDate||"",surgDate:p.surgDate||"",her2:p.her2||"",msi:p.msi||"",pdl1:p.pdl1||"",lauren:p.lauren||"",claudin:p.claudin||"",tmb:p.tmb||"",note:p.note||""}}
 function latestMrd(){const a=sorted(S.mrd||[]);return a.length?a[a.length-1]:null}
 function mrdLabel(x){if(!x)return"暂无";return x.qual+(x.value!=null&&x.qual!=="阴性"?" "+x.value+(x.unit||""):"")+" · "+x.d.slice(5)}
 function guideOf(phase){
@@ -166,7 +167,7 @@ function guideOf(phase){
  const rows=[
   ["康复随访","按医嘱复查影像、肿瘤标志物和 MRD。记录症状和体重变化，复诊时带给医生。"],
   ["复发/转移治疗","新方案可能带来不同副作用。把 MRD、标志物和症状变化都记下来，方便和医生沟通。"],
-  ["维持治疗","维持期也要规律复诊。黑便、发热、黄疸、气促等不要硬扛，及时联系医生。"],
+  ["维持治疗","纳武利尤单抗维持期：每天记体温、大便颜色、吞咽与蛋白。MRD阳性而影像阴性时，按医嘱做 FDG+FAPI 对照，不要自行解读。黑便、发热、尿路样症状、气促立刻联系医生。"],
   ["一线治疗","化疗/免疫/靶向期间，留意血常规、肝肾功能和营养。按医嘱用药，记录每次 MRD。"],
   ["术后辅助治疗","术后恢复与辅助化疗/靶向并行时，少量多餐、保证蛋白。按预约复查 MRD 和标志物。"],
   ["术前新辅助","新辅助阶段常需多次评估。保存病理、影像和 MRD 报告截图，方便前后对比。"],
@@ -193,18 +194,26 @@ function alerts(){
  if(low==3)A.push(["warn","连续3天蛋白质摄入明显偏低，建议咨询营养科"]);
  ["CEA","CA19-9"].forEach(k=>{const a=sorted(S.labs.filter(x=>x.k==k)),z=a[a.length-1];if(z&&labFlag(k,z.v)&&z.d>=addDays(-90))A.push(["warn",k+" 最近一次"+labFlag(k,z.v)+"（"+z.v+"，"+z.d+"），请医生判断"])});
  Object.keys(LAB).forEach(k=>{if(k==="CEA"||k==="CA19-9")return;const a=sorted(S.labs.filter(x=>x.k==k)),z=a[a.length-1];if(z&&labFlag(k,z.v)&&z.d>=addDays(-60))A.push(["warn",k+" 最近一次"+labFlag(k,z.v)+"（"+z.v+"，"+z.d+"），请医生判断"])});
- const lm=latestMrd();if(lm&&lm.qual==="阳性"&&lm.d>=addDays(-120))A.push(["warn","最近 MRD 仍为阳性（"+mrdLabel(lm)+"），请按医嘱复查"]);
+ const lm=latestMrd();if(lm&&lm.qual==="阳性"&&lm.d>=addDays(-120))A.push(["warn","最近 MRD 仍为阳性（"+mrdLabel(lm)+"），影像阴性时仍需按医嘱复查；不等同于已见病灶"]);
+ const lt=LG.filter(x=>x.temp!=null).pop();
+ if(lt&&lt.d>=addDays(-1)&&lt.temp>=TEMP_ALERT)A.push(["alert","最近体温 "+lt.temp+"℃，请尽快联系医生或就医"]);
+ const st=LG.filter(x=>x.stool).pop();
+ if(st&&st.d>=addDays(-1)&&(st.stool==="黑便"||st.stool==="血便"))A.push(["alert","记录了 "+st.stool+"，请尽快联系医生或就医"]);
+ const sw=LG.filter(x=>x.swallow!=null).pop();
+ if(sw&&sw.d==T&&sw.swallow>=5)A.push(["warn","今天吞咽明显困难，注意进食安全，复诊时告知（与吻合口/嗜酸性食管炎相关）"]);
+ const Ap=LG.filter(x=>x.ap!=null).slice(-3);
+ if(Ap.length==3&&Ap.every(x=>x.ap<=4))A.push(["warn","连续3天食欲偏低，结合营养不良史建议联系营养科"]);
  const act=[...S.logs.map(x=>x.d),...F.map(x=>x.d),...(S.mrd||[]).map(x=>x.d)].sort().pop();if(!act||act<addDays(-3))A.push(["warn","已超过3天没有记录"]);
  return A}
-function sig(){const o=[],LG=sorted(S.logs),W=LG.filter(x=>x.w>0),pr=prof(),last=LG.filter(x=>x.pain!=null||(x.sym&&x.sym.length)).pop(),lm=latestMrd();
- o.push(["档案",!pr.cancer?"n":"ok",!pr.cancer?"未设置":pr.t]);
+function sig(){const o=[],LG=sorted(S.logs),W=LG.filter(x=>x.w>0),pr=prof(),last=LG.filter(x=>x.pain!=null||(x.sym&&x.sym.length)).pop(),lm=latestMrd(),lt=LG.filter(x=>x.temp!=null).pop(),st=LG.filter(x=>x.stool).pop();
+ o.push(["档案",!pr.cancer?"n":"ok",!pr.cancer?"未设置":(pr.name||pr.stage||pr.t)]);
  o.push(["MRD",!lm?"n":lm.qual==="阳性"?"warn":lm.qual==="阴性"?"ok":"warn",!lm?"无数据":mrdLabel(lm)]);
- const bp=sorted(S.bp).pop()||LG.filter(x=>x.sys).pop();
- o.push(["血压",!bp?"n":(bp.sys>=140||bp.dia>=90)?"alert":(bp.sys>=130||bp.dia>=80)?"warn":"ok",!bp?"无数据":bp.sys+"/"+bp.dia]);
+ o.push(["体温",!lt?"n":lt.temp>=TEMP_ALERT?"alert":"ok",!lt?"无数据":lt.temp+"℃"]);
+ o.push(["大便",!st?"n":(st.stool==="黑便"||st.stool==="血便")?"alert":st.stool==="黏液/白冻样"?"warn":"ok",!st?"无数据":st.stool]);
  o.push(["体重",!W.length?"n":"ok",!W.length?"无数据":W[W.length-1].w+"kg"]);
  o.push(["不适",!last?"n":(last.sym||[]).some(x=>URG.includes(x))?"alert":last.pain>=4?"warn":"ok",!last?"无数据":(last.sym&&last.sym[0])||("疼痛"+last.pain)]);
- let t=0,d=0;for(let i=0;i<7;i++){const k=addDays(-i);t+=S.meds.length;d+=S.meds.filter(x=>x.done[k]).length}
- const pc=t?Math.round(d/t*100):0;o.push(["用药",!t?"n":pc>=80?"ok":"warn",pc+"%"]);return o}
+ let t0=0,d0=0;for(let i=0;i<7;i++){const k=addDays(-i);t0+=S.meds.length;d0+=S.meds.filter(x=>x.done[k]).length}
+ const pc=t0?Math.round(d0/t0*100):0;o.push(["用药",!t0?"n":pc>=80?"ok":"warn",pc+"%"]);return o}
 let picCtx={arr:[],max:6,cb:()=>{}};
 function photoPicker(max){return `<div class="photo-row row"><label class="btn soft sm">📷 拍照<input type="file" accept="image/*" capture="environment" onchange="ingestImgs(this.files)"></label><label class="btn soft sm">🖼 相册<input type="file" accept="image/*" multiple onchange="ingestImgs(this.files)"></label><label class="btn soft sm">📁 文件<input type="file" accept="image/*" multiple onchange="ingestImgs(this.files)"></label></div><div class="paste-box" tabindex="0" contenteditable="true" onpaste="pasteImg(event)" ondragover="event.preventDefault()" ondrop="dropImg(event)">粘贴截图，或拖入图片（最多 ${max} 张）</div>`}
 async function ingestImgs(files){if(!files||!files.length)return;await addFilesTo(picCtx.arr,picCtx.max,[...files]);picCtx.cb()}
@@ -218,7 +227,7 @@ function closeSheet(){const s=$("sh");if(s)s.remove()}
 function chart(arr,key){if(!arr.length)return '<p class="sub">还没有数据，点右下方“＋”添加。</p>';
  const W=320,H=150,pl=30,pr=14,pt=16,pb=26,vs=arr.map(x=>x[key]),mx=Math.max(...vs)*1.15||1,mn=Math.min(0,...vs),X=i=>pl+(arr.length==1?(W-pl-pr)/2:i*(W-pl-pr)/(arr.length-1)),Y=v=>pt+(H-pt-pb)*(1-(v-mn)/(mx-mn||1)),pts=arr.map((x,i)=>X(i)+","+Y(x[key])).join(" ");
  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img"><line x1="${pl}" y1="${H-pb}" x2="${W-pr}" y2="${H-pb}" stroke="var(--line)"/><text x="2" y="${pt+4}">${+mx.toFixed(2)}</text><text x="2" y="${H-pb}">${mn}</text>${arr.length>1?`<polygon points="${X(0)},${H-pb} ${pts} ${X(arr.length-1)},${H-pb}" fill="var(--rose)" opacity=".1"/>`:""}<polyline points="${pts}" fill="none" stroke="var(--rose)" stroke-width="2.4" stroke-linejoin="round"/>${arr.map((x,i)=>`<circle cx="${X(i)}" cy="${Y(x[key])}" r="4" fill="var(--card)" stroke="var(--rose)" stroke-width="2"/><text x="${X(i)}" y="${Y(x[key])-8}" text-anchor="middle">${x[key]}</text><text x="${X(i)}" y="${H-10}" text-anchor="middle">${x.d.slice(5)}</text>`).join("")}</svg>`}
-let tab="today",vd=today(),seg="weight",selD=today(),cm=0,labk="CEA",dp={type:"exam"},acc=new Set(["prof","med","dose","bl"]),mp={sel:[],img:[],type:null,txt:"",pro:0},nd={kind:"日常",title:"",text:"",imgs:[]},mrdF={d:"",method:"ddPCR",qual:"阳性",value:"",unit:"%",note:"",imgs:[]},wv=0,mc="其他",medId=null,rfOn=i=>S.risk[i]===true,bloodSel=["CEA","CA19-9","血红蛋白","白蛋白"];
+let tab="today",vd=today(),seg="weight",selD=today(),cm=0,labk="CEA",dp={type:"exam"},acc=new Set(["prof","med","dose","bl"]),mp={sel:[],img:[],type:null,txt:"",pro:0},nd={kind:"日常",title:"",text:"",imgs:[]},mrdF={d:"",method:"ddPCR",qual:"阳性",value:"",unit:"%",note:"",imgs:[]},wv=0,mc="其他",medId=null,rfOn=i=>S.risk[i]===true,bloodSel=["CEA","CA19-9","血红蛋白","白蛋白","TSH","CA125"];
 function standalone(){return window.navigator.standalone===true||window.matchMedia("(display-mode: standalone)").matches}
 let offlineOK=false;
 function securePage(){return location.protocol==="https:"||location.hostname==="localhost"||location.hostname==="127.0.0.1"}
@@ -228,26 +237,31 @@ function installCard(){
   const state=offlineOK?"已可离线":"正在准备离线，请在这一页停留几秒";
   return `<div class="card" style="background:var(--rose2)"><h2>装到主屏幕后即可离线</h2><p style="margin:0"><b>${state}</b></p><ol style="margin:8px 0 0;padding-left:18px"><li>用 Safari 打开本页，等到上面变成「已可离线」</li><li>点底部分享 → 添加到主屏幕 → 添加</li><li>从主屏幕图标进入后再记录</li></ol><p class="sub">装好后可以关掉电脑，开飞行模式也能打开。请从主屏幕图标打开后再记，记录只存在这台 iPhone 里。</p></div>`
 }
-function render(keep){$("app").innerHTML=V[tab]();$("nav").innerHTML=[["today","☀️","今天"],["diary","📖","记录"],["","",""],["trend","📈","趋势"],["me","🌿","我的"]].map(t=>t[0]?`<button class="${t[0]==tab?"on":""}" onclick="go('${t[0]}')"><b>${t[1]}</b>${t[2]}</button>`:`<button class="fab" onclick="menu()" aria-label="快速记录">＋</button>`).join("");if(!keep)window.scrollTo(0,0);const st=$("st");if(st)st.scrollLeft=st.scrollWidth}
+function render(keep){$("app").innerHTML=V[tab]();$("nav").innerHTML=[["today","☀️","今天"],["diary","📖","记录"],["","",""],["trend","📈","趋势"],["me","💗","我的"]].map(t=>t[0]?`<button class="${t[0]==tab?"on":""}" onclick="go('${t[0]}')"><b>${t[1]}</b>${t[2]}</button>`:`<button class="fab" onclick="menu()" aria-label="快速记录">＋</button>`).join("");if(!keep)window.scrollTo(0,0);const st=$("st");if(st)st.scrollLeft=st.scrollWidth}
 const go=t=>{tab=t;vd=today();render()};
 const V={};
 V.today=()=>{const T=today(),A=alerts(),lv=A.some(a=>a[0]=="alert")?"alert":A.length?"warn":"ok",l=S.logs.find(x=>x.d==T)||{},h=new Date().getHours(),now=nowT(),ph=prof(),ap=S.appt.filter(a=>a.d>=T).sort((a,b)=>a.d<b.d?-1:1)[0],lm=latestMrd(),g=guideOf(ph.phase);
  const timed=S.meds.filter(m=>m.at).sort((a,b)=>a.at<b.at?-1:1),other=S.meds.filter(m=>!m.at),dn=S.meds.filter(m=>m.done[T]).length,pro=proOf(T),ref=refPro(),wat=l.wat||0;
  const row=m=>{const d=medDone(m,T),late=!d&&m.at&&m.at<=now;return `<div class="item ${d?"done":""}" onclick="tick(${m.id})"><div class="ck">${d?"✓":""}</div><div style="flex:1"><div class="nm">${esc(m.n)}</div><div class="sub">${m.at?m.at+" · ":""}${esc(m.t)}${typeof m.done[T]=="string"?" · 已服 "+m.done[T]:""}</div></div><span class="tag ${late?"a":""}">${late?"已到点":esc(m.c)}</span></div>`};
- return `${installCard()}${backupCard()}<div class="hd"><h1>${h<11?"早上好":h<18?"下午好":"晚上好"}</h1><p>${T.slice(5).replace("-","月")}日 周${WK[new Date().getDay()]} · ${ph.name?esc(ph.name)+" · ":""}${ph.cancer?esc(ph.cancer):"实体瘤自我记录"}</p></div>
+ return `${installCard()}${backupCard()}<div class="hd"><h1>${h<11?"早上好":h<18?"下午好":"晚上好"}</h1><p>${T.slice(5).replace("-","月")}日 周${WK[new Date().getDay()]} · ${ph.name?esc(ph.name)+"，慢慢来":"慢慢来"} · ${ph.phase?esc(ph.phase):"自我记录"}</p></div>
  <details class="rib ${lv}"><summary>${lv=="ok"?"今天状态平稳，继续按医嘱治疗 ✨":lv=="warn"?"有 "+A.length+" 项需要留意 ›":"有需要尽快联系医生的情况 ›"}</summary>${A.length?`<ul>${A.map(a=>`<li>${esc(a[1])}</li>`).join("")}</ul>`:""}</details>
  <div class="card" onclick="tab='trend';seg='mrd';render()" style="cursor:pointer"><div class="row"><h2 style="margin:0">MRD 最新</h2><button class="btn soft sm sp" onclick="event.stopPropagation();sheetMrd()">＋ 录入</button></div><div class="big" style="margin-top:6px">${lm?esc(lm.qual+(lm.value!=null&&lm.qual!=="阴性"?" "+lm.value+lm.unit:"")):"—"}</div><p class="sub" style="margin:4px 0 0">${lm?lm.d+" · "+esc(lm.method||"")+" · 点进趋势看曲线":"还没有 MRD 记录，点这里或右上角录入"}</p></div>
  <div class="card"><div class="row"><h2 style="margin:0">今日用药</h2><span class="tag g sp">${dn}/${S.meds.length}</span></div>${timed.map(row).join("")}${other.length?`<div class="sub" style="margin:10px 0 0">不定时</div>`+other.map(row).join(""):""}${S.meds.length?"":'<p class="sub">还没有药物，去“我的”添加。</p>'}</div>
  <div class="card"><div class="row"><div style="flex:1"><div class="sub">蛋白质</div><div class="big">${pro}<span class="sub"> / ${ref} 克</span></div></div><button class="btn soft" onclick="sheetMeal()">🍽 记一餐</button></div><div class="prog" style="margin-top:10px"><i style="width:${Math.min(100,pro/ref*100)}%"></i></div>
  <div class="row" style="margin-top:14px"><div style="flex:1"><div class="sub">饮水</div><div class="big">${wat}<span class="sub"> 毫升</span></div></div><button class="btn soft" onclick="water()">💧 +1杯</button></div></div>
- <div class="card" onclick="sheetState()" style="cursor:pointer"><h2>今天的状态</h2>${l.mood!=null||l.en!=null||l.ap!=null?`<div class="row" style="gap:18px;font-size:15px">${[["心情","mood"],["体力","en"],["食欲","ap"]].map(k=>`<span>${k[0]} ${l[k[1]]!=null?EMO[Math.round(l[k[1]]/2)-1]:"–"}</span>`).join("")}${l.pain!=null?`<span>疼痛 ${l.pain}</span>`:""}</div>`:'<p class="sub" style="margin:0">还没记录，点这里记一下心情和身体 ›</p>'}${l.sym&&l.sym.length?`<div class="row" style="margin-top:8px">${l.sym.map(s=>`<span class="tag a">${esc(s)}</span>`).join("")}</div>`:""}${l.w?`<p class="sub" style="margin:8px 0 0">体重 ${l.w} kg${l.sys?" · 血压 "+l.sys+"/"+l.dia:""}</p>`:l.sys?`<p class="sub" style="margin:8px 0 0">血压 ${l.sys}/${l.dia}</p>`:""}</div>
+ <div class="card"><h2>每天必记</h2><p class="sub" style="margin-top:-4px">按洛希当前维持治疗与术后情况定制</p>
+ <div class="row" style="margin-top:10px"><div style="flex:1"><div class="sub">体温</div><div class="big" style="font-size:22px">${l.temp!=null?l.temp+"℃":"—"}</div></div><button class="btn soft sm" onclick="sheetTemp()">记录</button></div>
+ <div class="row" style="margin-top:10px"><div style="flex:1"><div class="sub">大便</div><div class="big" style="font-size:22px">${l.stool?esc(l.stool):"—"}${l.stoolN!=null?" · "+l.stoolN+"次":""}</div></div><button class="btn soft sm" onclick="sheetStool()">记录</button></div>
+ <div class="row" style="margin-top:10px"><div style="flex:1"><div class="sub">吞咽 / 烧心</div><div class="big" style="font-size:22px">${l.swallow!=null?esc((SWALLOW.find(x=>x[1]===l.swallow)||["—"])[0]):"—"}${l.reflux!=null?" · 反酸"+["无","轻","中","重"][l.reflux]:""}</div></div><button class="btn soft sm" onclick="sheetSwallow()">记录</button></div>
+ </div>
+ <div class="card" onclick="sheetState()" style="cursor:pointer"><h2>今天的状态</h2>${l.mood!=null||l.en!=null||l.ap!=null?`<div class="row" style="gap:18px;font-size:15px">${[["心情","mood"],["体力","en"],["食欲","ap"]].map(k=>`<span>${k[0]} ${l[k[1]]!=null?EMO[Math.round(l[k[1]]/2)-1]:"–"}</span>`).join("")}${l.pain!=null?`<span>疼痛 ${l.pain}</span>`:""}${l.sl!=null?`<span>睡眠 ${l.sl}h</span>`:""}</div>`:'<p class="sub" style="margin:0">还没记录，点这里记一下心情和身体 ›</p>'}${l.sym&&l.sym.length?`<div class="row" style="margin-top:8px">${l.sym.map(s=>`<span class="tag a">${esc(s)}</span>`).join("")}</div>`:""}${l.w?`<p class="sub" style="margin:8px 0 0">体重 ${l.w} kg${l.sys?" · 血压 "+l.sys+"/"+l.dia:""}</p>`:l.sys?`<p class="sub" style="margin:8px 0 0">血压 ${l.sys}/${l.dia}</p>`:""}</div>
  ${noteToday()}<div class="card"><h2>信号</h2><div class="sig">${sig().map(x=>`<span><i class="dot ${x[1]}"></i>${x[0]} ${esc(x[2])}</span>`).join("")}</div></div>
  <div class="card"><div class="row"><h2 style="margin:0">这一阶段</h2><span class="tag sp">${esc(g[0])}</span></div><p style="margin:8px 0 0">${esc(g[1])}</p></div>
  <div class="row" style="gap:10px;margin-bottom:14px"><div class="card" style="flex:1;margin:0;padding:13px" onclick="sheetProfile()"><div class="sub">🧬 档案</div><b>${esc(ph.t)}</b><div class="sub">${esc(ph.s)}</div></div><div class="card" style="flex:1;margin:0;padding:13px" onclick="go('me')"><div class="sub">📅 下次复诊</div>${ap?`<b>${esc(ap.t)}</b><div class="sub">${ap.d.slice(5)} · ${diff(T,ap.d)||"今"}天${diff(T,ap.d)?"后":""}</div>`:'<div class="sub">暂无</div>'}</div></div>
- <p class="tiny">洛希守护 · 示例数据，仅保存在本机。不能诊断或替代医生意见；黑便、高热、黄疸、剧烈腹痛或气促等请立刻就医。</p>`};
+ <p class="tiny">洛希守护 · 按洛希病情定制，仅保存在本机。不能诊断或替代医生意见；黑便、发热、黄疸、剧烈腹痛、气促或尿路样症状请立刻就医。</p>`};
 function tick(id){const m=S.meds.find(x=>x.id==id),T=today();if(m.done[T]){delete m.done[T];S.doses=S.doses.filter(x=>!(x.mid==m.id&&x.d==T))}else{m.done[T]=nowT();S.doses.push({id:Date.now(),mid:m.id,n:m.n,d:T,t:m.done[T],dose:m.dose||"",note:""});toast("已打卡 ✓")}save();render(true)}
 function water(){const l=TL();l.wat=(l.wat||0)+200;save();toast("💧 已记录 "+l.wat+" 毫升");render(true)}
-function menu(){const T=[["📝","记今天","sheetNote()"],["🍽","记一餐","sheetMeal()"],["🙂","今日状态","sheetState()"],["⚖️","体重","sheetW()"],["🌡","症状","sheetSym()"],["🧬","MRD","sheetMrd()"],["🩺","血压","sheetBP()"],["🧪","检查","dp.type='exam';sheetData()"],["💊","记一次药","sheetDose()"],["🩸","血化验","sheetBlood()"],["💧","喝水","water();closeSheet()"]];
+function menu(){const T=[["📝","记今天","sheetNote()"],["🍽","记一餐","sheetMeal()"],["🙂","今日状态","sheetState()"],["🌡️","体温","sheetTemp()"],["🚽","大便","sheetStool()"],["🥤","吞咽","sheetSwallow()"],["⚖️","体重","sheetW()"],["🌡","症状","sheetSym()"],["🧬","MRD","sheetMrd()"],["🩺","血压","sheetBP()"],["🧪","检查","dp.type='exam';sheetData()"],["💊","记一次药","sheetDose()"],["🩸","血化验","sheetBlood()"],["💧","喝水","water();closeSheet()"]];
  sheet("记录一下",`<div class="tiles">${T.map(t=>`<div class="tile" onclick="${t[2]}"><b>${t[0]}</b>${t[1]}</div>`).join("")}</div>`)}
 const ctxDay=()=>tab=="diary"?vd:today(),dayTag=()=>ctxDay()==today()?"":`<p class="sub" style="margin-top:-6px">记录到 ${ctxDay()}</p>`;
 const mealByHour=()=>{const h=new Date().getHours();return h<9?"早餐":h<11?"上午加餐":h<14?"午餐":h<17?"下午加餐":h<20?"晚餐":"睡前加餐"};
@@ -265,7 +279,9 @@ function saveMeal(){if(!mp.sel.length&&!mp.txt.trim()&&!mp.img.length){toast("�
  mp={sel:[],img:[],type:null,txt:"",pro:0};closeSheet();toast("已记录 🍽");render(true)}
 function sheetState(){const l=TL(ctxDay()),er=(t,k)=>`<p class="lab">${t}</p><div class="emo">${EMO.map((e,i)=>`<span class="${l[k]==(i+1)*2?"on":""}" onclick="setEmo('${k}',${i})">${e}</span>`).join("")}</div>`;
  sheet("今天感觉怎么样",`${dayTag()}${er("心情","mood")}${er("体力","en")}${er("食欲","ap")}<p class="lab">疼痛程度</p><div class="chips">${PAIN.map(p=>`<span class="chip ${l.pain===p[1]?"on":""}" onclick="setPain(${p[1]})">${p[0]}</span>`).join("")}</div>
- <p class="lab">昨晚睡眠</p><div class="row"><button class="btn soft sm" onclick="sl(-.5)">－</button><b style="font-size:20px;min-width:70px;text-align:center">${l.sl||"–"} 小时</b><button class="btn soft sm" onclick="sl(.5)">＋</button></div><button class="btn big" onclick="closeSheet();render(true)">完成</button>`)}
+ <p class="lab">昨晚睡眠</p><div class="row"><button class="btn soft sm" onclick="sl(-.5)">－</button><b style="font-size:20px;min-width:70px;text-align:center">${l.sl||"–"} 小时</b><button class="btn soft sm" onclick="sl(.5)">＋</button></div>
+ <div class="row" style="margin-top:14px;gap:8px"><button class="btn soft sm" onclick="sheetTemp()">体温 ${l.temp!=null?l.temp+"℃":"未记"}</button><button class="btn soft sm" onclick="sheetStool()">大便 ${l.stool||"未记"}</button><button class="btn soft sm" onclick="sheetSwallow()">吞咽 ${l.swallow!=null?((SWALLOW.find(x=>x[1]===l.swallow)||[])[0]||l.swallow):"未记"}</button></div>
+ <button class="btn big" onclick="closeSheet();render(true)">完成</button>`)}
 function setEmo(k,i){TL(ctxDay())[k]=(i+1)*2;save();sheetState()}
 function setPain(v){TL(ctxDay()).pain=v;save();sheetState()}
 function sl(n){const l=TL(ctxDay());l.sl=Math.max(0,Math.min(14,(l.sl||7)+n));save();sheetState()}
@@ -274,6 +290,24 @@ function wadj(n){wv=Math.round((wv+n)*10)/10;$("wd").firstChild.textContent=wv.t
 function saveW(){TL(ctxDay()).w=wv;save();wv=0;closeSheet();toast("已记录体重 ⚖️");render(true)}
 function sheetSym(){const l=TL(ctxDay());l.sym=l.sym||[];sheet("有哪些不舒服",`${dayTag()}<div class="chips">${SYM.map(s=>`<span class="chip ${l.sym.includes(s)?"on":""}" onclick="togS('${s}')">${s}</span>`).join("")}</div><p class="sub">黑便/便血、发热、黄疸、剧烈腹痛、气促等请立即就医。</p><input style="margin-top:12px" placeholder="其他备注（选填）" value="${esc(l.note||"")}" oninput="TL(ctxDay()).note=this.value;save()"><button class="btn big" onclick="closeSheet();render(true)">完成</button>`)}
 function togS(s){const l=TL(ctxDay()),i=l.sym.indexOf(s);i<0?l.sym.push(s):l.sym.splice(i,1);save();sheetSym()}
+function sheetTemp(){const l=TL(ctxDay());const v=l.temp!=null?l.temp:36.6;
+ sheet("记体温",`${dayTag()}<div class="row" style="justify-content:center;gap:18px;margin:16px 0"><button class="btn soft" onclick="tempAdj(-0.1)">－0.1</button><div class="big" id="tp">${(+v).toFixed(1)}<span class="sub"> ℃</span></div><button class="btn soft" onclick="tempAdj(0.1)">＋0.1</button></div>
+ <p class="sub">免疫治疗期间发热要重视。≥${TEMP_ALERT}℃ 建议尽快联系医生。测完腋温即可。</p>
+ <button class="btn big" onclick="saveTemp()">保存</button>`)}
+function tempAdj(n){const el=$("tp");let v=parseFloat(el.firstChild.textContent)||36.6;v=Math.round((v+n)*10)/10;el.firstChild.textContent=v.toFixed(1)}
+function saveTemp(){const v=parseFloat($("tp").firstChild.textContent);if(isNaN(v)){toast("请填体温");return}TL(ctxDay()).temp=v;save();closeSheet();toast(v>=TEMP_ALERT?"已记录，体温偏高请联系医生":"已记录体温");render(true)}
+function sheetStool(){const l=TL(ctxDay());
+ sheet("今天大便怎么样",`${dayTag()}<div class="chips">${STOOL.map(s=>`<span class="chip ${l.stool==s?"on":""}" onclick="TL(ctxDay()).stool='${s}';save();sheetStool()">${s}</span>`).join("")}</div>
+ <p class="lab">次数（选填）</p><div class="row"><button class="btn soft sm" onclick="const L=TL(ctxDay());L.stoolN=Math.max(0,(L.stoolN||0)-1);save();sheetStool()">－</button><b style="min-width:60px;text-align:center">${l.stoolN!=null?l.stoolN:"–"} 次</b><button class="btn soft sm" onclick="const L=TL(ctxDay());L.stoolN=(L.stoolN||0)+1;save();sheetStool()">＋</button></div>
+ <p class="sub">黑便/血便请立刻就医。黏液或白冻样便可对照既往奥沙利铂反应，复诊时提及。</p>
+ <button class="btn big" onclick="closeSheet();render(true)">完成</button>`)}
+function sheetSwallow(){const l=TL(ctxDay());
+ sheet("吞咽 / 进食",`${dayTag()}<p class="sub">近端胃切除后吻合口，以及疑似嗜酸性食管炎，都可能影响吞咽。每天记一下方便对比。</p>
+ <div class="chips">${SWALLOW.map(s=>`<span class="chip ${l.swallow===s[1]?"on":""}" onclick="TL(ctxDay()).swallow=${s[1]};save();sheetSwallow()">${s[0]}</span>`).join("")}</div>
+ <p class="lab">烧心 / 反酸</p><div class="chips">${[["无",0],["轻",1],["中",2],["重",3]].map(x=>`<span class="chip ${l.reflux===x[1]?"on":""}" onclick="TL(ctxDay()).reflux=${x[1]};save();sheetSwallow()">${x[0]}</span>`).join("")}</div>
+ <input style="margin-top:12px" placeholder="备注：卡在哪里、能否吃软食等" value="${esc(l.swNote||"")}" oninput="TL(ctxDay()).swNote=this.value;save()">
+ <button class="btn big" onclick="closeSheet();render(true)">完成</button>`)}
+
 function sheetMrd(){if(!mrdF.d)mrdF.d=today();picCtx={arr:mrdF.imgs,max:6,cb:()=>sheetMrd()};
  sheet("MRD 记录",`${dayTag()}<label class="l">检测日期</label><input id="mrdD" type="date" value="${mrdF.d||today()}">
  <label class="l">方法</label><div class="chips">${MRD_METHODS.map(m=>`<span class="chip ${mrdF.method==m?"on":""}" onclick="mrdF.method='${m}';sheetMrd()">${m}</span>`).join("")}</div>
@@ -288,17 +322,21 @@ function saveMrd(){const d=$("mrdD").value;if(!d){toast("请选日期");return}c
  mrdF={d:"",method:"ddPCR",qual:"阳性",value:"",unit:"%",note:"",imgs:[]};save();closeSheet();toast("已保存 MRD");tab="trend";seg="mrd";render()}
 function delMrd(id){if(!confirm("删除这条 MRD？"))return;S.mrd=(S.mrd||[]).filter(x=>x.id!=id);save();if($("sh"))sheetMrd();else render(true)}
 function sheetProfile(){const p=S.profile||{};
- sheet("患者档案",`<label class="l">称呼（选填）</label><input id="pn" value="${esc(p.name||"")}" placeholder="姓名或昵称">
- <label class="l">癌种</label><select id="pc">${CANCERS.map(c=>`<option ${(p.cancer||"胃癌")==c?"selected":""}>${c}</option>`).join("")}</select>
- <label class="l">分期（如 III / IV）</label><input id="pst" value="${esc(p.stage||"")}" placeholder="按病理或医生说明">
+ sheet("患者档案",`<label class="l">称呼</label><input id="pn" value="${esc(p.name||"")}" placeholder="洛希 / 姓名">
+ <label class="l">癌种（可改文字）</label><input id="pc" value="${esc(p.cancer||"胃癌")}" placeholder="胃低分化腺癌（弥漫型）">
+ <label class="l">分期</label><input id="pst" value="${esc(p.stage||"")}" placeholder="如 ypT3N0">
  <label class="l">治疗阶段</label><select id="pp">${PHASES.map(c=>`<option ${(p.phase||"")==c?"selected":""}>${c}</option>`).join("")}</select>
  <label class="l">确诊日期</label><input id="pdx" type="date" value="${p.dxDate||""}">
- <label class="l">手术日期（如有）</label><input id="psg" type="date" value="${p.surgDate||""}">
- <label class="l">HER2</label><input id="ph2" value="${esc(p.her2||"")}" placeholder="如 0 / 1+ / 2+ / 3+">
- <label class="l">MSI / MMR</label><input id="pmsi" value="${esc(p.msi||"")}" placeholder="如 MSS / MSI-H">
- <label class="l">PD-L1</label><input id="ppd" value="${esc(p.pdl1||"")}" placeholder="如 CPS / TPS">
+ <label class="l">手术日期</label><input id="psg" type="date" value="${p.surgDate||""}">
+ <label class="l">Lauren / 组织学</label><input id="pla" value="${esc(p.lauren||"")}" placeholder="弥漫型 / 印戒背景">
+ <label class="l">HER2</label><input id="ph2" value="${esc(p.her2||"")}" placeholder="如 小灶1+">
+ <label class="l">MSI / MMR</label><input id="pmsi" value="${esc(p.msi||"")}" placeholder="如 pMMR / MSS">
+ <label class="l">PD-L1</label><input id="ppd" value="${esc(p.pdl1||"")}" placeholder="如 CPS <1">
+ <label class="l">Claudin18.2</label><input id="pcl" value="${esc(p.claudin||"")}" placeholder="约10%弱阳">
+ <label class="l">TMB</label><input id="ptm" value="${esc(p.tmb||"")}" placeholder="如 6.50 Muts/Mb">
+ <label class="l">血型 / 备注</label><input id="pnote" value="${esc(p.note||"")}" placeholder="关键伴随病史一句话">
  <button class="btn big" onclick="saveProfile()">保存</button>`)}
-function saveProfile(){S.profile={name:$("pn").value.trim(),cancer:$("pc").value,stage:$("pst").value.trim(),phase:$("pp").value,dxDate:$("pdx").value,surgDate:$("psg").value,her2:$("ph2").value.trim(),msi:$("pmsi").value.trim(),pdl1:$("ppd").value.trim()};save();closeSheet();toast("已更新档案");render(true)}
+function saveProfile(){S.profile={name:$("pn").value.trim(),cancer:$("pc").value.trim()||"胃癌",stage:$("pst").value.trim(),phase:$("pp").value,dxDate:$("pdx").value,surgDate:$("psg").value,lauren:$("pla").value.trim(),her2:$("ph2").value.trim(),msi:$("pmsi").value.trim(),pdl1:$("ppd").value.trim(),claudin:$("pcl").value.trim(),tmb:$("ptm").value.trim(),note:$("pnote").value.trim(),blood:(S.profile||{}).blood||""};save();closeSheet();toast("已更新档案");render(true)}
 function sheetBP(){const l=TL(ctxDay());sheet("记血压",`${dayTag()}<label class="l">收缩压（高压）</label><input id="bs" type="number" inputmode="numeric" value="${l.sys||""}" placeholder="例如 110"><label class="l">舒张压（低压）</label><input id="bd" type="number" inputmode="numeric" value="${l.dia||""}" placeholder="例如 70"><p class="sub">居家测量仅供记录。收缩压≥140 或舒张压≥90 请联系医生。</p><button class="btn big" onclick="saveBP()">保存</button>`)}
 function saveBP(){const sys=parseInt($("bs").value,10),dia=parseInt($("bd").value,10);if(isNaN(sys)||isNaN(dia)){toast("请填血压");return}
  const d=ctxDay();TL(d).sys=sys;TL(d).dia=dia;S.bp=S.bp.filter(x=>x.d!=d);S.bp.push({d,sys,dia});save();closeSheet();toast("已记录血压 🩺");render(true)}
@@ -403,11 +441,11 @@ V.diary=()=>{const strip=Array.from({length:14},(_,i)=>addDays(i-13)),l=S.logs.f
  ${noteCards(notes)}
  ${meals.map(x=>`<div class="card"><div class="row"><span class="tag r">${x.meal}</span><span class="sub">${x.t}</span>${x.pro?`<span class="sub">蛋白≈${x.pro}g</span>`:""}<button class="btn ghost sm sp" onclick="delFood(${x.id})">删除</button></div><p style="margin:8px 0 0">${esc([...(x.foods||[]),x.txt].filter(Boolean).join("、"))}</p>${x.imgs&&x.imgs.length?`<div class="thumbs">${x.imgs.map(i=>`<img src="${i}" onclick="showImg(this.src)">`).join("")}</div>`:""}</div>`).join("")}
  ${mrdDay.map(x=>`<div class="card"><div class="row"><span class="tag g">MRD</span><span class="sub">${esc(x.method||"")}</span><button class="btn ghost sm sp" onclick="delMrd(${x.id});render(true)">删除</button></div><p style="margin:8px 0 0"><b>${esc(x.qual)}</b>${x.value!=null&&x.qual!=="阴性"?" "+x.value+(x.unit||""):""} ${x.note?esc(x.note):""}</p>${x.imgs&&x.imgs.length?`<div class="thumbs">${x.imgs.map(i=>`<img src="${i}" onclick="showImg(this.src)">`).join("")}</div>`:""}</div>`).join("")}
- ${l.mood!=null||l.en!=null||l.ap!=null||l.pain!=null||l.w||l.wat||l.sys||(l.sym&&l.sym.length)?`<div class="card"><h2>当天状态</h2><div class="row" style="gap:14px">${l.w?`<span>⚖️ ${l.w}kg</span>`:""}${l.sys?`<span>🩺 ${l.sys}/${l.dia}</span>`:""}${[["心情","mood"],["体力","en"],["食欲","ap"]].map(k=>l[k[1]]!=null?`<span>${k[0]} ${EMO[Math.round(l[k[1]]/2)-1]}</span>`:"").join("")}${l.pain!=null?`<span>疼痛 ${l.pain}</span>`:""}${l.sl?`<span>睡眠 ${l.sl}h</span>`:""}${l.wat?`<span>💧 ${l.wat}ml</span>`:""}</div>${l.sym&&l.sym.length?`<div class="row" style="margin-top:8px">${l.sym.map(s=>`<span class="tag a">${s}</span>`).join("")}</div>`:""}${l.note?`<p class="sub">${esc(l.note)}</p>`:""}</div>`:""}
+ ${l.mood!=null||l.en!=null||l.ap!=null||l.pain!=null||l.w||l.wat||l.sys||l.temp!=null||l.stool||l.swallow!=null||(l.sym&&l.sym.length)?`<div class="card"><h2>当天状态</h2><div class="row" style="gap:14px">${l.w?`<span>⚖️ ${l.w}kg</span>`:""}${l.temp!=null?`<span>🌡️ ${l.temp}℃</span>`:""}${l.stool?`<span>🚽 ${esc(l.stool)}${l.stoolN!=null?" "+l.stoolN+"次":""}</span>`:""}${l.swallow!=null?`<span>🥤 ${esc((SWALLOW.find(x=>x[1]===l.swallow)||["—"])[0])}</span>`:""}${l.sys?`<span>🩺 ${l.sys}/${l.dia}</span>`:""}${[["心情","mood"],["体力","en"],["食欲","ap"]].map(k=>l[k[1]]!=null?`<span>${k[0]} ${EMO[Math.round(l[k[1]]/2)-1]}</span>`:"").join("")}${l.pain!=null?`<span>疼痛 ${l.pain}</span>`:""}${l.sl?`<span>睡眠 ${l.sl}h</span>`:""}${l.wat?`<span>💧 ${l.wat}ml</span>`:""}</div>${l.sym&&l.sym.length?`<div class="row" style="margin-top:8px">${l.sym.map(s=>`<span class="tag a">${s}</span>`).join("")}</div>`:""}${l.note?`<p class="sub">${esc(l.note)}</p>`:""}${l.swNote?`<p class="sub">${esc(l.swNote)}</p>`:""}</div>`:""}
  ${taken.length?`<div class="card"><h2>已服药物</h2>${taken.map(m=>`<div class="row" style="padding:4px 0"><span>${esc(m.n)}</span><span class="sub sp">${typeof m.done[vd]=="string"?m.done[vd]:"✓"}</span></div>`).join("")}</div>`:""}
  ${S.doses.filter(x=>x.d==vd).length?`<div class="card"><h2>用药记录</h2>${S.doses.filter(x=>x.d==vd).map(x=>`<div class="row" style="padding:4px 0"><span>${x.t} ${esc(x.n)}${x.dose?" · "+esc(x.dose):""}</span><button class="btn ghost sm sp" onclick="delDose(${x.id})">删除</button></div>`).join("")}</div>`:""}
  ${S.bloods.filter(x=>x.d==vd).map(b=>`<div class="card"><h2>血化验</h2><p class="sub">${esc(b.hosp||"")}${b.note?" · "+esc(b.note):""}</p>${b.items.map(i=>`<div class="row" style="padding:4px 0"><span>${esc(i.k)}</span><b class="sp">${i.v}${labFlag(i.k,i.v)?" · "+labFlag(i.k,i.v):""}</b></div>`).join("")}</div>`).join("")}
- ${!notes.length&&!meals.length&&!taken.length&&!mrdDay.length&&!(l.w||l.mood!=null||l.pain!=null||l.sys)?`<div class="card"><p class="sub" style="margin:0">这天还没有记录。点下方“＋”补记。</p></div>`:""}`};
+ ${!notes.length&&!meals.length&&!taken.length&&!mrdDay.length&&!(l.w||l.mood!=null||l.pain!=null||l.sys||l.temp!=null||l.stool||l.swallow!=null)?`<div class="card"><p class="sub" style="margin:0">这天还没有记录。点下方“＋”补记。</p></div>`:""}`};
 function noteCards(list){return (list||[]).map(x=>`<div class="card"><div class="row"><span class="tag">${esc(x.kind||"日常")}</span><span class="sub">${esc(x.t||"")}</span><button class="btn ghost sm sp" onclick="delNote(${x.id})">删除</button></div>${x.title?`<h2 style="margin:8px 0 0">${esc(x.title)}</h2>`:""}${x.text?`<p style="margin:8px 0 0;white-space:pre-wrap">${esc(x.text)}</p>`:""}${x.imgs&&x.imgs.length?`<div class="thumbs">${x.imgs.map(i=>`<img src="${i}" onclick="showImg(this.src)">`).join("")}</div>`:""}</div>`).join("")}
 function noteToday(){const list=(S.notes||[]).filter(x=>x.d==today());return `<div class="card"><div class="row"><h2 style="margin:0">今天的事</h2><button class="btn soft sp" onclick="sheetNote()">＋ 记下</button></div>${list.length?noteCards(list):'<p class="sub" style="margin:0">写下门诊、化验或影像结论，或放入报告截图。按这一天归档，只存在这台手机里。</p>'}</div>`}
 function sheetNote(){picCtx={arr:nd.imgs,max:6,cb:()=>sheetNote()};sheet("记今天的事",`${dayTag()}<p class="sub">写清楚当天发生了什么。化验、影像、病理或 MRD 报告，用截图放进来即可。</p><div class="chips">${NOTE_KINDS.map(k=>`<span class="chip ${nd.kind==k?"on":""}" onclick="nd.kind='${k}';sheetNote()">${k}</span>`).join("")}</div><label class="l">标题</label><input value="${esc(nd.title)}" placeholder="例如 复诊记录、CT 报告" oninput="nd.title=this.value"><label class="l">描述</label><textarea rows="4" placeholder="医生原话、报告上的结论，或今天发生的事" oninput="nd.text=this.value">${esc(nd.text)}</textarea>${photoPicker(6)}<div class="thumbs">${nd.imgs.map((s,i)=>`<img src="${s}" onclick="nd.imgs.splice(${i},1);sheetNote()">`).join("")}</div><p class="sub">最多 6 张。支持拍照、相册、文件、粘贴与拖入。</p><button class="btn big" onclick="saveNote()">保存到这一天</button>`)}
@@ -415,11 +453,12 @@ function saveNote(){const title=(nd.title||"").trim(),text=(nd.text||"").trim();
 function delNote(id){if(!confirm("删除这条记事和里面的照片？"))return;S.notes=(S.notes||[]).filter(x=>x.id!=id);save();render(true)}
 function delFood(id){if(confirm("删除这一餐？")){F=F.filter(x=>x.id!=id);saveF();render(true)}}
 function showImg(s){const d=document.createElement("div");d.style.cssText="position:fixed;inset:0;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;z-index:40";d.innerHTML=`<img src="${s}" style="max-width:96%;max-height:90%;border-radius:14px">`;d.onclick=()=>d.remove();document.body.appendChild(d)}
-const SEGS=[["mrd","MRD"],["weight","体重"],["lab","肿瘤标志物"],["bp","血压"],["pro","蛋白质"],["mood","心情"],["cal","治疗日历"]];
+const SEGS=[["mrd","MRD"],["weight","体重"],["temp","体温"],["lab","肿瘤标志物"],["bp","血压"],["pro","蛋白质"],["mood","心情"],["cal","治疗日历"]];
 V.trend=()=>{let body="";const lst=(arr,key,fmt)=>`<div style="margin-top:8px">${arr.slice().reverse().slice(0,6).map(x=>`<div class="row" style="padding:7px 0;border-top:1px solid var(--line)"><span class="sub">${x.d}</span><b>${fmt(x)}</b><button class="btn ghost sm sp" onclick="delItem('${key}',${x.i})">删除</button></div>`).join("")}</div>`;
  const idx=a=>sorted(a.map((x,i)=>({...x,i})));
  if(seg=="mrd"){const a=sorted((S.mrd||[]).map(x=>({d:x.d,v:x.value==null?0:x.value,id:x.id,qual:x.qual,method:x.method})));body=`<div class="card"><h2>MRD 数值趋势</h2>${chart(a,"v")}<p class="sub">阴性通常记为 0。不同检测方法不可直接对比，以同一家实验室序列为准。</p><div style="margin-top:8px">${a.slice().reverse().map(x=>`<div class="row" style="padding:7px 0;border-top:1px solid var(--line)"><span class="sub">${x.d}</span><b>${esc(x.qual)}${x.v!=null&&x.qual!=="阴性"?" "+x.v:""}</b><button class="btn ghost sm sp" onclick="delMrd(${x.id})">删除</button></div>`).join("")}</div><button class="btn soft" style="margin-top:10px" onclick="sheetMrd()">录入 MRD</button></div>`}
- else if(seg=="weight"){const W=sorted(S.logs).filter(x=>x.w>0);body=`<div class="card"><h2>体重</h2>${chart(W.map(x=>({d:x.d,v:x.w})),"v")}<p class="sub">治疗期间体重变化因人而异，以肿瘤科/营养科建议为准。</p><button class="btn soft" style="margin-top:10px" onclick="sheetW()">记体重</button></div>`}
+ else if(seg=="temp"){const a=sorted(S.logs).filter(x=>x.temp!=null).map(x=>({d:x.d,v:x.temp}));body=`<div class="card"><h2>体温</h2>${chart(a,"v")}<p class="sub">免疫治疗期间请关注发热。≥${TEMP_ALERT}℃ 建议联系医生。</p><button class="btn soft" style="margin-top:10px" onclick="sheetTemp()">记体温</button></div>`}
+ else if(seg=="weight"){const W=sorted(S.logs).filter(x=>x.w>0);body=`<div class="card"><h2>体重</h2>${chart(W.map(x=>({d:x.d,v:x.w})),"v")}<p class="sub">治疗期间体重变化因人而异，结合贫血与营养不良史，目标听肿瘤科/营养科。</p><button class="btn soft" style="margin-top:10px" onclick="sheetW()">记体重</button></div>`}
  else if(seg=="bp"){const a=idx(S.bp);body=`<div class="card"><h2>血压（收缩压）</h2>${chart(a,"sys")}<p class="sub">同时记录舒张压。以医院测量和医生判断为准。</p>${lst(a,"bp" ,x=>x.sys+"/"+x.dia)}<button class="btn soft" style="margin-top:10px" onclick="sheetBP()">记血压</button></div>`}
  else if(seg=="lab"){const a=idx(S.labs).filter(x=>x.k==labk),r=LAB[labk],groups=sorted(S.bloods).slice().reverse().slice(0,5);
  body=`<div class="card"><h2>化验趋势</h2><select onchange="labk=this.value;render(true)">${Object.keys(LAB).map(k=>`<option ${k==labk?"selected":""}>${k}</option>`).join("")}</select><div style="margin-top:8px">${chart(a,"v")}</div><p class="sub">常见参考 ${r[1]}–${r[2]} ${r[0]}，以化验单和医生判断为准。</p>${lst(a,"labs",x=>x.v+(labFlag(labk,x.v)?" · "+labFlag(labk,x.v):""))}<button class="btn soft" style="margin-top:10px" onclick="sheetBlood()">录入一组血检</button></div>
@@ -440,7 +479,9 @@ function cal(){const p=prof(),n=new Date(),m0=new Date(Date.UTC(n.getFullYear(),
 const AC=(k,t,b)=>`<details class="acc" ${acc.has(k)?"open":""} ontoggle="this.open?acc.add('${k}'):acc.delete('${k}')"><summary>${t}</summary><div class="in">${b}</div></details>`;
 V.me=()=>{const up=S.appt.filter(a=>a.d>=today()).sort((a,b)=>a.d<b.d?-1:1),on=rfOn,u=RF.filter((r,i)=>on(i)&&r[1]).length,dn=RF.filter((r,i)=>on(i)&&!r[1]).length,ph=prof(),p=S.profile||{},bagN=BAG.filter(x=>S.bag&&S.bag[x]).length,recent=sorted(S.doses).slice(-8).reverse(),g=guideOf(ph.phase);
  return `<div class="hd"><h1>我的</h1><p>档案、用药、MRD 和导出都在这里</p></div>
- ${AC("prof","🧬 患者档案",`<p><b>${esc(ph.t)}</b></p><p class="sub">${esc(ph.s)}${ph.name?" · "+esc(ph.name):""}</p><p class="sub">HER2 ${esc(p.her2||"—")} · MSI ${esc(p.msi||"—")} · PD-L1 ${esc(p.pdl1||"—")}</p><p style="margin:8px 0 0">${esc(g[1])}</p><button class="btn" onclick="sheetProfile()">填写 / 修改</button>`)}
+ ${AC("prof","🧬 患者档案",`<p><b>${esc(ph.name||"洛希")}</b> · ${esc(ph.t)}</p><p class="sub">${esc(ph.s)}</p><p class="sub">${p.lauren?esc(p.lauren)+" · ":""}HER2 ${esc(p.her2||"—")} · MSI ${esc(p.msi||"—")} · PD-L1 ${esc(p.pdl1||"—")}</p><p class="sub">Claudin18.2 ${esc(p.claudin||"—")} · TMB ${esc(p.tmb||"—")}</p>${p.note?`<p class="sub">${esc(p.note)}</p>`:""}<p style="margin:8px 0 0">${esc(g[1])}</p><button class="btn" onclick="sheetProfile()">填写 / 修改</button>`)}
+ ${AC("care","📌 洛希专属提醒",`<ul style="margin:0;padding-left:18px;font-size:14px"><li>每天记：体温、大便颜色、吞咽/烧心、饮食蛋白、体重</li><li>MRD 阳性 + 影像阴性：按医嘱做 FDG+FAPI，不要自行解读</li><li>替吉奥曾诱发尿路样反应，若再用务必提前告知医生</li><li>奥沙利铂曾有黏液/白冻样便反应，可记在大便里</li><li>右肺磨玻璃结节为独立 MIA，PET 前务必告知读片医生</li><li>贫血、甲减、营养不良：关注血红蛋白、TSH、白蛋白</li><li>卵巢处理存在专家分歧，MDT 时带上这份摘要</li></ul>`)}
+ ${AC("rx","⚠️ 既往用药反应",`${(S.reacts||[]).map((x,i)=>`<div class="row" style="padding:7px 0"><div style="flex:1"><b>${esc(x.n)}</b><div class="sub">${x.d||""} · ${esc(x.r)}</div></div><button class="btn ghost sm" onclick="S.reacts.splice(${i},1);save();render(true)">删除</button></div>`).join("")||'<p class="sub">暂无</p>'}<div class="row" style="margin-top:8px"><input id="rxn" placeholder="药物" style="flex:1"><input id="rxr" placeholder="反应" style="flex:1.4"></div><button class="btn soft big" onclick="addReact()">添加反应</button>`)}
  ${AC("mrd","🧪 MRD 记录",`${sorted(S.mrd||[]).slice().reverse().map(x=>`<div class="row" style="padding:7px 0"><div style="flex:1"><b>${x.d}</b><div class="sub">${esc(x.method||"")} · ${esc(x.qual)}${x.value!=null&&x.qual!=="阴性"?" "+x.value+(x.unit||""):""}</div></div><button class="btn ghost sm" onclick="delMrd(${x.id});render(true)">删除</button></div>`).join("")||'<p class="sub">循环肿瘤 DNA / MRD 可按次记录，趋势页可看曲线。</p>'}<button class="btn" onclick="sheetMrd()">＋ 录入 MRD</button>`)}
  ${AC("ex","🩻 影像与病理",`${sorted(S.exams).slice().reverse().map(e=>{const i=S.exams.indexOf(e);return `<div class="row" style="padding:7px 0"><div style="flex:1"><b>${esc(e.t)}</b><div class="sub">${e.d} · ${esc(e.r)}</div></div><button class="btn ghost sm" onclick="delExam(${i})">删除</button></div>`}).join("")||'<p class="sub">CT、PET、胃镜、病理结论可以记在这里。</p>'}<button class="btn" onclick="dp.type='exam';sheetData()">＋ 记一次检查</button>`)}
  ${AC("med","💊 药物与吃药提醒",`${S.meds.map(m=>`<div class="item" onclick="sheetMed(${m.id})"><div style="flex:1"><div class="nm">${esc(m.n)}</div><div class="sub">${m.at?m.at+" 提醒 · ":""}${esc(m.t)}${m.dose?" · "+esc(m.dose):""}${m.remind===false?" · 不提醒":""}</div></div><span class="tag">${esc(m.c)}</span></div>`).join("")||'<p class="sub">暂无</p>'}<div class="row" style="margin-top:12px"><button class="btn" onclick="sheetMed()">＋ 添加药物</button><button class="btn soft" onclick="addCommonMeds()">添加示例用药</button></div><p class="sub">点常用药名可快速填入。导出文件含全部记录，可再导入回来。</p><div class="row"><button class="btn soft" onclick="backupData()">保存到文件</button><button class="btn soft" onclick="pickImport()">导入记录</button></div>${(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform())?`<button class="btn big" onclick="enableReminders()">开启系统吃药提醒</button><p class="sub">保存带时间的药物后会每天推送。</p>`:`<button class="btn big" onclick="shareMedsIcs()">把吃药时间加到日历</button><p class="sub">iPhone 日历会到点提醒。打开洛希守护也能看到今天吃了没有。</p>`}`)}
@@ -456,10 +497,11 @@ V.me=()=>{const up=S.appt.filter(a=>a.d>=today()).sort((a,b)=>a.d<b.d?-1:1),on=r
  ${AC("dt","⚙️ 数据",bakPanel())}`};
 function addAppt(){if(!$("ad").value||!$("at").value.trim()){toast("请填日期和项目");return}S.appt.push({id:Date.now(),d:$("ad").value,t:$("at").value.trim()});save();render(true)}
 function addIntol(){const v=$("ii").value.trim();if(!v)return;S.intol.push(v);save();render(true)}
+function addReact(){const n=$("rxn").value.trim(),r=$("rxr").value.trim();if(!n||!r){toast("请填药物和反应");return}S.reacts=S.reacts||[];S.reacts.push({d:today(),n,r});save();render(true)}
 function labTxt(){return Object.keys(LAB).map(k=>{const a=sorted(S.labs.filter(x=>x.k==k)),z=a[a.length-1];return z?`${k} ${z.v}${LAB[k][0]}${labFlag(k,z.v)?"（"+labFlag(k,z.v)+"）":""} ${z.d}`:null}).filter(Boolean).join("；")||"暂无"}
 function mrdTxt(){return sorted(S.mrd||[]).map(x=>`${x.d} ${x.method||""} ${x.qual}${x.value!=null&&x.qual!=="阴性"?" "+x.value+(x.unit||""):""}${x.note?" "+x.note:""}`).join("\n")||"暂无"}
-function sum(){const L=sorted(S.logs).slice(-5),pr=prof(),p=S.profile||{};return `【复诊摘要】生成日期 ${today()}\n\n■ 档案\n${pr.t}；${pr.s}${pr.name?"；"+pr.name:""}\nHER2 ${p.her2||"—"} · MSI ${p.msi||"—"} · PD-L1 ${p.pdl1||"—"}\n\n■ MRD\n${mrdTxt()}\n\n■ 近期检查\n${sorted(S.exams).reverse().map(e=>`${e.d} ${e.t}：${e.r}`).join("\n")||"暂无"}\n\n■ 血化验\n${labTxt()}\n\n■ 血压\n${sorted(S.bp).slice(-5).map(x=>`${x.d} ${x.sys}/${x.dia}`).join("\n")||"暂无"}\n\n■ 当前药物\n${S.meds.map(x=>`${x.n}（${x.c}，${x.t}${x.at?"，提醒 "+x.at:""}${x.dose?"，"+x.dose:""}）`).join("\n")||"暂无"}\n\n■ 过敏\n${S.intol.join("\n")||"暂无"}\n\n■ 预约\n${S.appt.map(a=>a.d+" "+a.t).join("\n")||"暂无"}\n\n■ 近期状态\n${L.map(x=>`${x.d} ${x.w?"体重"+x.w+"kg ":""}${x.sys?"血压"+x.sys+"/"+x.dia+" ":""}${x.pain!=null?"疼痛"+x.pain+" ":""}${x.mood!=null?"心情"+x.mood/2+"/5 ":""}${x.sym&&x.sym.length?x.sym.join("、"):""}`).join("\n")||"暂无"}\n\n■ 系统提醒\n${alerts().map(a=>a[1]).join("\n")||"无"}\n\n■ 想问医生\n1. \n2. `}
-function famTxt(){const T=today(),A=alerts(),l=sorted(S.logs).filter(x=>x.w>0).pop(),a=S.appt.filter(x=>x.d>=T).sort((x,y)=>x.d<y.d?-1:1)[0],pr=prof(),lm=latestMrd();return `【${T} 洛希守护简报】\n档案：${pr.t}\nMRD：${lm?mrdLabel(lm):"暂无"}\n整体：${A.some(x=>x[0]=="alert")?"需要尽快联系医生":A.length?"有几项需要留意":"今天看起来还平稳"}\n今日用药：${S.meds.filter(m=>m.done[T]).length}/${S.meds.length} 已打卡\n今日蛋白质：${proOf(T)}/${refPro()} 克\n${l?`最近体重（${l.d}）：${l.w}kg`:"最近没有体重记录"}\n需要关注：${A.map(x=>x[1]).join("；")||"无"}\n下次复诊：${a?a.d+" "+a.t:"暂无"}\n（来自洛希守护，仅供家人了解，不代替医生意见）`}
+function sum(){const L=sorted(S.logs).slice(-5),pr=prof(),p=S.profile||{};return `【复诊摘要】生成日期 ${today()}\n\n■ 档案\n${pr.name||""}；${pr.t}；${pr.s}\n${p.lauren?p.lauren+"；":""}HER2 ${p.her2||"—"} · MSI ${p.msi||"—"} · PD-L1 ${p.pdl1||"—"}\nClaudin18.2 ${p.claudin||"—"} · TMB ${p.tmb||"—"}\n${p.note||""}\n\n■ 既往用药反应\n${(S.reacts||[]).map(x=>`${x.d||""} ${x.n}：${x.r}`).join("\n")||"暂无"}\n\n■ MRD\n${mrdTxt()}\n\n■ 近期检查\n${sorted(S.exams).reverse().map(e=>`${e.d} ${e.t}：${e.r}`).join("\n")||"暂无"}\n\n■ 血化验\n${labTxt()}\n\n■ 血压\n${sorted(S.bp).slice(-5).map(x=>`${x.d} ${x.sys}/${x.dia}`).join("\n")||"暂无"}\n\n■ 当前药物\n${S.meds.map(x=>`${x.n}（${x.c}，${x.t}${x.at?"，提醒 "+x.at:""}${x.dose?"，"+x.dose:""}）`).join("\n")||"暂无"}\n\n■ 过敏\n${S.intol.join("\n")||"暂无"}\n\n■ 预约\n${S.appt.map(a=>a.d+" "+a.t).join("\n")||"暂无"}\n\n■ 近期状态\n${L.map(x=>`${x.d} ${x.w?"体重"+x.w+"kg ":""}${x.temp!=null?"体温"+x.temp+"℃ ":""}${x.stool?"大便"+x.stool+" ":""}${x.swallow!=null?"吞咽"+x.swallow+" ":""}${x.sys?"血压"+x.sys+"/"+x.dia+" ":""}${x.pain!=null?"疼痛"+x.pain+" ":""}${x.mood!=null?"心情"+x.mood/2+"/5 ":""}${x.sym&&x.sym.length?x.sym.join("、"):""}`).join("\n")||"暂无"}\n\n■ 系统提醒\n${alerts().map(a=>a[1]).join("\n")||"无"}\n\n■ 想问医生\n1. \n2. `}
+function famTxt(){const T=today(),A=alerts(),l=sorted(S.logs).filter(x=>x.w>0).pop(),lg=S.logs.find(x=>x.d==T)||{},a=S.appt.filter(x=>x.d>=T).sort((x,y)=>x.d<y.d?-1:1)[0],pr=prof(),lm=latestMrd();return `【${T} 洛希守护简报】\n${pr.name||"洛希"}：${pr.t}\nMRD：${lm?mrdLabel(lm):"暂无"}\n整体：${A.some(x=>x[0]=="alert")?"需要尽快联系医生":A.length?"有几项需要留意":"今天看起来还平稳"}\n今日用药：${S.meds.filter(m=>m.done[T]).length}/${S.meds.length} 已打卡\n今日蛋白质：${proOf(T)}/${refPro()} 克\n体温：${lg.temp!=null?lg.temp+"℃":"未记"} · 大便：${lg.stool||"未记"} · 吞咽：${lg.swallow!=null?lg.swallow:"未记"}\n${l?`最近体重（${l.d}）：${l.w}kg`:"最近没有体重记录"}\n需要关注：${A.map(x=>x[1]).join("；")||"无"}\n下次复诊：${a?a.d+" "+a.t:"暂无"}\n（来自洛希守护，仅供家人了解，不代替医生意见）`}
 async function shareFam(){const t=famTxt();try{if(navigator.share){await navigator.share({text:t});return}}catch(e){if(e&&e.name=="AbortError")return}try{await navigator.clipboard.writeText(t);toast("已复制，可粘贴发给家人")}catch(e){const r=document.createRange();r.selectNodeContents($("fam"));const g=getSelection();g.removeAllRanges();g.addRange(r)}}
 function copySum(){const t=sum();try{navigator.clipboard.writeText(t).then(()=>toast("已复制"),()=>{})}catch(e){const r=document.createRange();r.selectNodeContents($("sum"));const g=getSelection();g.removeAllRanges();g.addRange(r)}}
 async function exportRpt(){let dl=null;try{dl=typeof claude!=="undefined"?await claude.use("downloads"):null}catch(e){}
@@ -522,8 +564,9 @@ function isPregnancyData(S){if(!S)return false;if(hasCancerData(S))return false;
 function hydrate(stateRaw,foodRaw){
   try{S=JSON.parse(stateRaw||"null")}catch(e){S=null}
   try{F=JSON.parse(foodRaw||"[]")}catch(e){F=[]}
-  if(!S||isPregnancyData(S)){S=demo();fresh=true;F=[{id:1,d:today(),t:"08:10",meal:"早餐",txt:"小米粥半碗、蒸蛋（示例）",foods:["鸡蛋","杂粮主食"],pro:10,imgs:[]}]}
-  ["exams","meds","reacts","intol","logs","appt","labs","bp","doses","bloods","notes","mrd"].forEach(k=>S[k]=S[k]||[]);S.risk=S.risk||{};S.profile=S.profile||{cancer:"胃癌",stage:"",phase:"",dxDate:"",surgDate:"",her2:"",msi:"",pdl1:"",name:""};S.bag=S.bag||{};if(S.remindOn==null)S.remindOn=true;
+  const isOldDemo=S&&S.profile&&S.profile.dxDate==="2024-06-12"&&S.profile.surgDate==="2024-07-20";
+  if(!S||isPregnancyData(S)||isOldDemo){S=demo();fresh=true;F=[{id:1,d:today(),t:"08:10",meal:"早餐",txt:"小米粥半碗、蒸蛋",foods:["鸡蛋","杂粮主食"],pro:10,imgs:[]}]}
+  ["exams","meds","reacts","intol","logs","appt","labs","bp","doses","bloods","notes","mrd"].forEach(k=>S[k]=S[k]||[]);S.risk=S.risk||{};S.profile=S.profile||{cancer:"胃癌",stage:"",phase:"",dxDate:"",surgDate:"",her2:"",msi:"",pdl1:"",name:"",lauren:"",claudin:"",tmb:"",note:""};S.bag=S.bag||{};if(S.remindOn==null)S.remindOn=true;if(!S.v)S.v=2;
 }
 (async()=>{
   let stateRaw=lsGet(LS),foodRaw=lsGet(LSF);
@@ -552,7 +595,7 @@ function hydrate(stateRaw,foodRaw){
   scheduleReminders();
   if(securePage()&&"serviceWorker"in navigator){
     navigator.serviceWorker.register("sw.js").then(()=>navigator.serviceWorker.ready).then(async()=>{
-      const cache=await caches.open("luoxi-v3");
+      const cache=await caches.open("luoxi-v4");
       let hit=await cache.match("./")||await cache.match("index.html");
       if(!hit){
         const res=await fetch("index.html",{cache:"reload"});

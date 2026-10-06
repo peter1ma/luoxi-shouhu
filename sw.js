@@ -1,4 +1,4 @@
-const CACHE = 'luoxi-v3';
+const CACHE = 'luoxi-v4';
 const APP = "./index.html";
 const ASSETS = ["./", APP, "./manifest.webmanifest", "./icon-180.png", "./icon-192.png", "./icon-512.png", "./sw.js"];
 
